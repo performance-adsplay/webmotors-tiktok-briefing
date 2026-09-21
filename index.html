@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Briefing TikTok Ads — Webmotors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --paper:#F5F7FA; --card:#FFFFFF; --tint:#EDF1F8;
+  --ink:#0E141B; --ink-2:#3A4655; --muted:#5B6673;
+  --blue:#1B44FF; --blue-ink:#0A1C6B; --signal:#FFD21E;
+  --line:#DDE3EC;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0B0F16; --card:#131A24; --tint:#182234;
+    --ink:#EAF0F6; --ink-2:#B4C0CE; --muted:#8A96A4;
+    --blue:#5A76FF; --blue-ink:#B9C6FF; --signal:#FFD21E;
+    --line:#202B39;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0B0F16; --card:#131A24; --tint:#182234;
+  --ink:#EAF0F6; --ink-2:#B4C0CE; --muted:#8A96A4;
+  --blue:#5A76FF; --blue-ink:#B9C6FF; --signal:#FFD21E;
+  --line:#202B39;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 12px)}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Instrument Sans",system-ui,sans-serif; -webkit-font-smoothing:antialiased;
+  font-size:17px; line-height:1.6;
+}
+.wrap{max-width:940px; margin:0 auto; padding:0 24px}
+.prose{max-width:64ch}
+p{margin:0 0 15px} p:last-child{margin:0}
+strong{font-weight:600}
+a{color:var(--blue); text-underline-offset:3px}
+
+/* ---------- hero ---------- */
+.hero{background:var(--blue); color:#fff; padding:calc(env(safe-area-inset-top,0px) + 40px) 0 44px; overflow:hidden}
+.hero .wrap{display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center}
+.kicker{font-weight:600; font-size:13px; letter-spacing:.02em; color:#C9D3FF; margin:0 0 14px}
+.kicker b{color:var(--signal); font-weight:600}
+.hero h1{font-family:"Bricolage Grotesque",sans-serif; font-weight:800;
+  font-size:clamp(2.3rem,6vw,3.9rem); line-height:.98; letter-spacing:-.03em; margin:0}
+.hero h1 em{font-style:normal; display:block; color:var(--signal)}
+.hero .tagline{font-size:17px; color:#DCE3FF; margin:18px 0 26px; max-width:42ch}
+.metagrid{display:grid; grid-template-columns:repeat(4,auto); gap:22px 34px}
+.metagrid dt{font-size:12px; font-weight:600; color:#9FB0FF; margin:0}
+.metagrid dd{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:17px; margin:3px 0 0; color:#fff}
+
+/* ---------- 9:16 safe-zone frame ---------- */
+.frame{width:200px; flex:none}
+.frame svg{width:100%; height:auto; display:block; filter:drop-shadow(0 18px 40px rgba(6,16,80,.45))}
+@keyframes hookpulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hookbar{animation:hookpulse 1.7s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.hookbar{animation:none}}
+
+/* ---------- sections ---------- */
+main{padding:54px 0 90px}
+section{margin-top:52px}
+section:first-child{margin-top:0}
+.head{display:flex; align-items:center; gap:14px; margin:0 0 20px}
+.num{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:15px;
+  color:var(--blue); background:var(--tint); width:36px; height:36px; border-radius:9px;
+  display:grid; place-items:center; flex:none}
+h2{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:clamp(1.4rem,3.2vw,1.85rem);
+  letter-spacing:-.02em; line-height:1.1; margin:0}
+h3{font-family:"Bricolage Grotesque",sans-serif; font-weight:600; font-size:1.02rem;
+  letter-spacing:-.01em; margin:26px 0 10px}
+
+/* ---------- track cards ---------- */
+.tracks{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:6px}
+.track{background:var(--card); border:1px solid var(--line); border-radius:16px;
+  padding:20px 18px; display:flex; flex-direction:column}
+.track .chip{font-family:"Bricolage Grotesque",sans-serif; font-weight:800; font-size:20px;
+  color:#fff; width:40px; height:40px; border-radius:11px; display:grid; place-items:center; margin-bottom:14px}
+.track.a .chip{background:var(--blue-ink)} .track.b .chip{background:var(--blue)} .track.c .chip{background:#5B7BFF}
+.track h4{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:1.05rem; margin:0 0 4px; letter-spacing:-.01em}
+.track .funnel{font-size:13px; font-weight:600; color:var(--blue); margin:0 0 12px}
+.track p{font-size:14.5px; color:var(--ink-2); line-height:1.5}
+.track .obj{margin-top:auto; padding-top:14px; font-size:13px; color:var(--muted)}
+.track .obj b{color:var(--ink); font-weight:600; display:block; font-size:11px; margin-bottom:2px; letter-spacing:.02em}
+
+/* ---------- tables ---------- */
+.scroll{overflow-x:auto; margin:18px 0; border:1px solid var(--line); border-radius:14px}
+table{border-collapse:collapse; width:100%; min-width:520px; background:var(--card)}
+th,td{text-align:left; padding:13px 15px; vertical-align:top; font-size:15px; line-height:1.45}
+th{background:var(--tint); font-weight:600; font-size:13px; color:var(--ink-2); white-space:nowrap}
+td{border-top:1px solid var(--line)}
+.rowkey{font-weight:600; white-space:nowrap}
+.pill{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; color:var(--blue)}
+
+/* ---------- lists ---------- */
+ul.clean{list-style:none; margin:14px 0; padding:0}
+ul.clean li{position:relative; padding-left:26px; margin:0 0 10px; max-width:64ch}
+ul.clean li::before{content:""; position:absolute; left:4px; top:.62em; width:8px; height:8px;
+  border-radius:3px; background:var(--blue)}
+ul.clean li:last-child{margin-bottom:0}
+ul.clean.mini li{font-size:14.5px}
+
+/* ---------- flag / highlight ---------- */
+.flag{font-family:"Instrument Sans",sans-serif; font-weight:600; font-size:11px;
+  background:var(--signal); color:#1a1300; border-radius:5px; padding:2px 6px; margin:0 2px;
+  white-space:nowrap; letter-spacing:.01em}
+
+/* ---------- callouts ---------- */
+.note{background:var(--card); border:1px solid var(--line); border-radius:14px;
+  padding:18px 20px; margin:18px 0; position:relative}
+.note .tab{font-family:"Bricolage Grotesque",sans-serif; font-weight:700; font-size:13px;
+  margin:0 0 8px; display:inline-flex; align-items:center; gap:8px}
+.note .tab::before{content:""; width:10px; height:10px; border-radius:3px; background:var(--signal)}
+.note.blue .tab::before{background:var(--blue)}
+.note.dark{background:var(--ink); border-color:var(--ink); color:var(--paper)}
+.note.dark .tab{color:#fff} .note.dark .tab::before{background:var(--signal)}
+.note.dark p{color:#C9D0DA}
+.note p{font-size:15px; margin:0 0 10px} .note p:last-child{margin:0}
+.note strong{color:inherit}
+
+/* ---------- code ---------- */
+.code{overflow-x:auto; background:var(--ink); border-radius:14px; margin:16px 0; padding:16px 18px}
+.code pre{font-family:"IBM Plex Mono",monospace; font-size:13px; line-height:1.6; color:#E9EEFF;
+  margin:0; white-space:pre}
+.code .c-blue{color:var(--signal)}
+code.inline{font-family:"IBM Plex Mono",monospace; font-size:.85em; background:var(--tint);
+  padding:2px 6px; border-radius:5px}
+
+/* ---------- checklist ---------- */
+.checks{list-style:none; margin:16px 0 0; padding:0; display:grid; gap:10px}
+.checks li{display:flex; gap:13px; align-items:flex-start; background:var(--card);
+  border:1px solid var(--line); border-radius:11px; padding:13px 15px; font-size:15px; cursor:default}
+.checks .box{flex:none; width:20px; height:20px; border-radius:6px; border:2px solid var(--line);
+  margin-top:1px; transition:background .12s,border-color .12s}
+.checks li:hover .box{border-color:var(--blue)}
+
+/* ---------- footer ---------- */
+.foot{margin-top:60px; padding-top:22px; border-top:1px solid var(--line);
+  color:var(--muted); font-size:13.5px; line-height:1.7}
+.foot b{font-family:"Bricolage Grotesque",sans-serif; color:var(--ink); font-weight:700; font-size:15px}
+
+:focus-visible{outline:2px solid var(--blue); outline-offset:3px}
+
+@media (max-width:720px){
+  .hero .wrap{grid-template-columns:1fr; gap:30px}
+  .frame{width:150px; order:-1}
+  .metagrid{grid-template-columns:repeat(2,1fr); gap:18px}
+  .tracks{grid-template-columns:1fr}
+  body{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Performance · Paid Social &nbsp;/&nbsp; <b>Webmotors</b></p>
+      <h1>Briefing de<br>produção<em>TikTok Ads</em></h1>
+      <p class="tagline">Padrão único de specs, variações, nomenclatura e rastreamento para a agência criativa. Peça fora do padrão volta para ajuste.</p>
+      <dl class="metagrid">
+        <div><dt>Cliente</dt><dd>Webmotors</dd></div>
+        <div><dt>Área</dt><dd>Performance</dd></div>
+        <div><dt>Canal</dt><dd>TikTok · Leilão</dd></div>
+        <div><dt>Versão</dt><dd>v1</dd></div>
+      </dl>
+    </div>
+    <div class="frame" aria-hidden="true">
+      <!-- 9:16 safe-zone reference -->
+      <svg viewBox="0 0 200 356" xmlns="http://www.w3.org/2000/svg">
+        <rect x="4" y="4" width="192" height="348" rx="22" fill="#0A1C6B" stroke="#FFFFFF" stroke-opacity=".9" stroke-width="2"/>
+        <!-- unsafe bands -->
+        <rect x="6" y="6" width="188" height="46" rx="20" fill="#FFFFFF" fill-opacity=".08"/>
+        <rect x="6" y="300" width="188" height="50" rx="20" fill="#FFFFFF" fill-opacity=".08"/>
+        <rect x="158" y="60" width="36" height="238" fill="#FFFFFF" fill-opacity=".08"/>
+        <!-- safe zone -->
+        <rect x="20" y="62" width="132" height="230" rx="10" fill="none" stroke="#FFD21E" stroke-width="2" stroke-dasharray="6 6"/>
+        <text x="86" y="182" text-anchor="middle" font-family="Instrument Sans,sans-serif" font-size="11" font-weight="600" fill="#FFD21E">safe zone</text>
+        <!-- hook bar -->
+        <rect class="hookbar" x="20" y="70" width="94" height="16" rx="4" fill="#FFD21E"/>
+        <text x="27" y="82" font-family="Instrument Sans,sans-serif" font-size="10" font-weight="700" fill="#0A1C6B">HOOK 0–3s</text>
+        <!-- right UI dots -->
+        <circle cx="176" cy="150" r="6" fill="#fff" fill-opacity=".55"/>
+        <circle cx="176" cy="178" r="6" fill="#fff" fill-opacity=".55"/>
+        <circle cx="176" cy="206" r="6" fill="#fff" fill-opacity=".55"/>
+        <!-- caption lines -->
+        <rect x="20" y="312" width="120" height="6" rx="3" fill="#fff" fill-opacity=".5"/>
+        <rect x="20" y="324" width="86" height="6" rx="3" fill="#fff" fill-opacity=".35"/>
+        <rect x="20" y="336" width="64" height="9" rx="4" fill="#FFD21E"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <section>
+    <div class="head"><span class="num">00</span><h2>Como usar este documento</h2></div>
+    <div class="prose">
+      <p>Padrão de entrega para todos os assets de TikTok Ads. Cada peça precisa respeitar as specs técnicas, a matriz de variações, a nomenclatura e a parametrização de UTM aqui definidas.</p>
+    </div>
+    <div class="note">
+      <p class="tab">Validação obrigatória</p>
+      <p>Os itens marcados com <span class="flag">verificar</span> — limites de caracteres, tamanho de arquivo, duração e specs de carrossel — devem ser conferidos na spec sheet oficial do <strong>TikTok Ads Manager / Business Help Center</strong> na data da produção. O TikTok muda esses parâmetros com frequência.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">01</span><h2>Aplicação por audiência</h2></div>
+    <div class="prose"><p>A Webmotors é um marketplace de duas pontas — quem compra e quem vende — somado à base B2B de lojistas. As três audiências têm lógica de aquisição, objetivo e tom distintos, e <strong>não compartilham criativo</strong>.</p></div>
+    <div class="tracks">
+      <article class="track a">
+        <span class="chip">A</span>
+        <h4>Lojista / Concessionária</h4>
+        <p class="funnel">B2B · demand creation</p>
+        <p>Aquisição de lojistas para planos, com educação e viés institucional. Volume menor, conceito mais sério.</p>
+        <p class="obj"><b>Objetivo</b>Lead gen / conversão web</p>
+      </article>
+      <article class="track b">
+        <span class="chip">B</span>
+        <h4>Comprador</h4>
+        <p class="funnel">B2C · demand capture</p>
+        <p>Busca de veículo e uso do marketplace/app. É o workhorse de volume — teste criativo agressivo.</p>
+        <p class="obj"><b>Objetivo</b>App install / app event + tráfego</p>
+      </article>
+      <article class="track c">
+        <span class="chip">C</span>
+        <h4>Anunciante PF</h4>
+        <p class="funnel">B2C · demand capture</p>
+        <p>“Anuncie seu carro”: cadastro de anúncio por pessoa física. Volume médio, hook direto para conversão.</p>
+        <p class="obj"><b>Objetivo</b>Lead / conversão web / app event</p>
+      </article>
+    </div>
+    <div class="note blue">
+      <p class="tab">Mensuração por track</p>
+      <p>Tracks de <strong>app</strong> (parte de B e C) atribuem via SDK/eventos do app, não por UTM de URL. Tracks <strong>web</strong> (A e landing pages de C) usam UTM (Seção 06). Muda o destino da peça, não a produção do criativo. A matriz da Seção 05 é replicada por track.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">02</span><h2>Formatos prioritários</h2></div>
+    <div class="prose"><p>Foco em leilão (Ads Manager), não reserva. Ordem de prioridade para performance:</p></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>#</th><th>Formato</th><th>Descrição</th><th>Uso recomendado</th></tr></thead>
+        <tbody>
+          <tr><td class="pill">1</td><td class="rowkey">In-Feed Video</td><td>Vídeo full-screen 9:16 no feed “For You”. Formato-base.</td><td>Todos os tracks. Workhorse de performance.</td></tr>
+          <tr><td class="pill">2</td><td class="rowkey">Spark Ads</td><td>Impulsiona post orgânico (marca ou criador). Parece nativo e acumula engajamento orgânico.</td><td>Prioritário no Track A (B2B) — reduz “cara de anúncio”. Forte também em C.</td></tr>
+          <tr><td class="pill">3</td><td class="rowkey">Carousel / Photo</td><td>Imagens deslizáveis, placements específicos. <span class="flag">verificar</span> disponibilidade e nº de imagens.</td><td>Tracks B e C: vitrine de veículos, comparativos. Prioridade média.</td></tr>
+          <tr><td class="pill">4</td><td class="rowkey">Reserva</td><td>TopView / Top Feed / Pulse. Alto custo, branding.</td><td>Opcional, só Track A em picos de awareness. Não é default.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="prose"><p style="font-size:14.5px;color:var(--muted)"><strong>Não produzir por ora:</strong> Collection / Video Shopping, Playable, Branded Effects / Hashtag Challenge (escopo separado).</p></div>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">03</span><h2>Specs técnicas — vídeo</h2></div>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td class="rowkey">Aspect ratio</td><td>9:16 primário. Entregar 1:1 e 16:9 como fallback de placement.</td></tr>
+          <tr><td class="rowkey">Resolução</td><td>Mín. 540×960 · recomendado 1080×1920 <span class="flag">verificar</span></td></tr>
+          <tr><td class="rowkey">Duração</td><td>5–60s permitido <span class="flag">verificar</span>. Produzir em duas faixas: 9–15s (hook rápido) e 21–34s (mais contexto).</td></tr>
+          <tr><td class="rowkey">Arquivo</td><td>.mp4 / .mov / .mpeg <span class="flag">verificar</span> · Codec H.264</td></tr>
+          <tr><td class="rowkey">Tamanho máx.</td><td>~500 MB <span class="flag">verificar</span></td></tr>
+          <tr><td class="rowkey">Bitrate</td><td>≥ 516 kbps · frame rate ≥ 30 fps</td></tr>
+          <tr><td class="rowkey">Áudio</td><td>Sempre com som + <strong>legenda queimada obrigatória</strong> (consumo mudo + acessibilidade).</td></tr>
+          <tr><td class="rowkey">Safe zones</td><td>Texto e logo fora das bordas: topo, base (caption/CTA) e coluna direita (UI). Nada crítico nos ~15% inferiores nem à direita. <span class="flag">verificar</span> template atual.</td></tr>
+          <tr><td class="rowkey">Capa</td><td>Frame de capa definido à mão; primeiro frame legível e com mensagem. Em Spark Ads, capa = post orgânico.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Regras criativas de performance — não negociáveis</h3>
+    <ul class="clean">
+      <li><strong>Hook nos 3 primeiros segundos</strong>: problema ou ganho explícito, com texto na tela.</li>
+      <li>Estética nativa (UGC / talking head / screen recording do app / test drive real), não comercial de TV.</li>
+      <li>CTA visual e verbal reforçando o CTA do botão.</li>
+      <li>Uma ideia por vídeo.</li>
+      <li>Quando o veículo aparece, mostrar carro real e legível — é o que mais prende no nicho automotivo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">04</span><h2>Specs — copy</h2></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Elemento</th><th>Regra</th><th>Observação</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">Caption</td><td>Até 100 caracteres <span class="flag">verificar</span>. Trabalhar em 80–90 para evitar truncamento.</td><td>Evitar #, @ e emojis em excesso.</td></tr>
+          <tr><td class="rowkey">Nome de marca</td><td>Limite atual <span class="flag">verificar</span></td><td>Padronizar grafia “Webmotors”.</td></tr>
+          <tr><td class="rowkey">CTA (botão)</td><td>Escolher da lista fixa do TikTok — não é campo livre.</td><td>Definir 2 por track para teste.</td></tr>
+          <tr><td class="rowkey">Texto on-screen</td><td>Livre, dentro da safe zone.</td><td>É o que mais converte: hook + CTA visual.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>CTA de referência por track <span class="flag">verificar</span> lista viva</h3>
+    <ul class="clean mini">
+      <li><strong>A — Lojista:</strong> Solicitar demonstração / Fale conosco / Saiba mais</li>
+      <li><strong>B — Comprador:</strong> Baixar (app) / Saiba mais</li>
+      <li><strong>C — Anunciante PF:</strong> Cadastre-se / Saiba mais</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">05</span><h2>Matriz de produção</h2></div>
+    <div class="prose"><p>Por conceito criativo, dentro de cada track:</p></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Entregável</th><th>Qtd.</th><th>Racional</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">Vídeos-mestre</td><td class="pill">3–5</td><td>Base de teste de leilão.</td></tr>
+          <tr><td class="rowkey">Variações de hook (3s)</td><td class="pill">2–3</td><td>Maior alavanca; testar sobre o mesmo corpo.</td></tr>
+          <tr><td class="rowkey">Cortes de duração</td><td class="pill">2</td><td>15s + ~30s, para cobrir faixas de retenção.</td></tr>
+          <tr><td class="rowkey">Captions por vídeo</td><td class="pill">2–3</td><td>Ângulos de mensagem.</td></tr>
+          <tr><td class="rowkey">CTA (lista fixa)</td><td class="pill">2</td><td>Teste de intenção.</td></tr>
+          <tr><td class="rowkey">Aspect ratios</td><td class="pill">3</td><td>9:16 + 1:1 + 16:9 (fallback).</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note blue">
+      <p class="tab">Cálculo de referência — 1 rodada por track</p>
+      <p>4 conceitos × 3 hooks × 2 durações = <strong>24 cortes</strong>, cada um em 9:16 / 1:1 / 16:9 + 2–3 captions. O Track B tende a exigir mais volume; o Track A roda com volume menor e conceito mais estável.</p>
+    </div>
+    <h3>Conceitos de partida</h3>
+    <ul class="clean mini">
+      <li><strong>A — Lojista:</strong> <code class="inline">leadsqualificados</code> <code class="inline">vitrinedigital</code> <code class="inline">gestaoanuncios</code> <code class="inline">planoloja</code></li>
+      <li><strong>B — Comprador:</strong> <code class="inline">buscafacil</code> <code class="inline">precojusto</code> <code class="inline">financiamento</code> <code class="inline">seminovosgarantia</code> <code class="inline">appbusca</code></li>
+      <li><strong>C — Anunciante PF:</strong> <code class="inline">anuncierapido</code> <code class="inline">avaliacao</code> <code class="inline">vistoria</code> <code class="inline">vendasegura</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">06</span><h2>UTMs e rastreamento</h2></div>
+    <div class="prose"><p>Toda URL de destino <strong>web</strong> carrega UTMs + macros dinâmicas do TikTok, para atribuição consistente no CRM/CDP. Campanhas de <strong>app</strong> atribuem via SDK/eventos (Seção 01).</p></div>
+    <h3>Template padrão</h3>
+    <div class="code"><pre>https://[dominio-webmotors]/[lp]?utm_source=tiktok&amp;utm_medium=paid_social
+  &amp;utm_campaign=<span class="c-blue">__CAMPAIGN_NAME__</span>&amp;utm_content=<span class="c-blue">__CID_NAME__</span>
+  &amp;utm_term=<span class="c-blue">__AID_NAME__</span>&amp;tt_adid=<span class="c-blue">__CID__</span></pre></div>
+    <h3>Macros dinâmicas <span class="flag">verificar</span> sintaxe</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Macro</th><th>Preenche com</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey"><code class="inline">__CAMPAIGN_NAME__</code></td><td>Nome da campanha</td></tr>
+          <tr><td class="rowkey"><code class="inline">__AID_NAME__</code></td><td>Nome do ad group</td></tr>
+          <tr><td class="rowkey"><code class="inline">__CID_NAME__</code></td><td>Nome do anúncio (criativo)</td></tr>
+          <tr><td class="rowkey"><code class="inline">__CID__</code></td><td>ID do anúncio</td></tr>
+          <tr><td class="rowkey"><code class="inline">__PLACEMENT__</code></td><td>Placement</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="clean mini">
+      <li><code class="inline">utm_source=tiktok</code> sempre minúsculo, sem variação.</li>
+      <li><code class="inline">utm_medium=paid_social</code>.</li>
+      <li><code class="inline">utm_campaign</code> e <code class="inline">utm_content</code> usam macro dinâmica — não digitar manual.</li>
+    </ul>
+    <div class="note">
+      <p class="tab">A agência não define UTM</p>
+      <p>A parametrização é preenchida pelo time de Performance na subida. A agência só precisa saber que <strong>utm_content = nome do anúncio</strong> — logo, a nomenclatura de arquivo (Seção 07) tem que bater com o nome do criativo.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">07</span><h2>Nomenclatura de arquivos</h2></div>
+    <div class="prose"><p>Padrão obrigatório na entrega — sem espaços, sem acento:</p></div>
+    <div class="code"><pre>WEBMOTORS_<span class="c-blue">[TRACK]</span>_<span class="c-blue">[FORMATO]</span>_<span class="c-blue">[CONCEITO]</span>_<span class="c-blue">[HOOK]</span>_<span class="c-blue">[DURACAO]</span>_<span class="c-blue">[RATIO]</span>_<span class="c-blue">[VERSAO]</span>.mp4</pre></div>
+    <h3>Exemplos</h3>
+    <div class="code"><pre>WEBMOTORS_COMP_INFEED_financiamento_hookA_15s_9x16_v01.mp4
+WEBMOTORS_LOJA_SPARK_leadsqualificados_hookB_30s_1x1_v02.mp4
+WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
+    <ul class="clean mini">
+      <li><strong>TRACK:</strong> <code class="inline">LOJA</code> lojista · <code class="inline">COMP</code> comprador · <code class="inline">ANPF</code> anunciante PF</li>
+      <li><strong>RATIO:</strong> <code class="inline">9x16</code> · <code class="inline">1x1</code> · <code class="inline">16x9</code></li>
+      <li>Captions em planilha separada, mapeadas 1:1 ao nome do arquivo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">08</span><h2>Pacote de entrega</h2></div>
+    <div class="prose"><p>Por rodada, a agência entrega:</p></div>
+    <ul class="clean">
+      <li>Vídeos exportados conforme Seções 03 e 05, nomeados por Seção 07.</li>
+      <li>Todos os aspect ratios de cada corte.</li>
+      <li>Frames de capa, quando aplicável.</li>
+      <li><strong>Planilha de copy:</strong> arquivo → caption(s) → CTA sugerido → track → conceito.</li>
+      <li>Arquivos-fonte editáveis para iteração interna.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="head"><span class="num">09</span><h2>Aprovação antes da subida</h2></div>
+    <ul class="checks">
+      <li><span class="box"></span> Hook nos 3 primeiros segundos</li>
+      <li><span class="box"></span> Legenda queimada presente</li>
+      <li><span class="box"></span> Elementos dentro da safe zone</li>
+      <li><span class="box"></span> Aspect ratios 9:16 / 1:1 / 16:9 entregues</li>
+      <li><span class="box"></span> Nomenclatura batendo com a planilha de copy</li>
+      <li><span class="box"></span> Caption dentro do limite de caracteres <span class="flag">verificar</span></li>
+      <li><span class="box"></span> CTA dentro da lista fixa do TikTok</li>
+      <li><span class="box"></span> Track e conceito corretos no nome do arquivo</li>
+      <li><span class="box"></span> Compliance automotivo/financeiro conferido</li>
+      <li><span class="box"></span> Specs conferidas contra a spec sheet viva do TikTok <span class="flag">verificar</span></li>
+    </ul>
+    <div class="note dark">
+      <p class="tab">Compliance do nicho — não negociável</p>
+      <p>Claims de preço (“melhor preço”, “mais barato do Brasil”) só com respaldo comprovável.</p>
+      <p><strong>Financiamento:</strong> taxa, parcela e CET seguem regras do Bacen e do parceiro financeiro. Não prometer aprovação; exibir condições quando exigido. Nada de “juro zero” sem base.</p>
+      <p><strong>Garantia de seminovos:</strong> afirmar apenas o que o programa cobre.</p>
+      <p>Não usar placa, dados de veículo ou dados pessoais reais sem consentimento; direitos de imagem em UGC devidamente cedidos.</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <b>Briefing de Produção — TikTok Ads · Webmotors</b><br>
+    Documento interno de performance, v1. Itens marcados <span class="flag">verificar</span> devem ser validados na spec sheet viva do TikTok na data da produção.
+  </footer>
+
+</div>
+</main>
+</body>
+</html>
