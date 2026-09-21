@@ -149,6 +149,37 @@ code.inline{font-family:"IBM Plex Mono",monospace; font-size:.85em; background:v
 .foot .santander{font-size:12px; color:#7C7B87; padding-top:14px; border-top:1px solid #3a3945}
 .foot b{color:#fff; font-weight:600}
 
+/* ---------- handover ---------- */
+.handover-cta{display:flex; flex-wrap:wrap; align-items:center; gap:16px; background:var(--card);
+  border:1px solid var(--line); border-left:4px solid var(--red); border-radius:14px; padding:20px 22px; margin:6px 0 24px}
+.handover-cta .txt{flex:1 1 260px}
+.handover-cta .txt b{display:block; font-weight:700; font-size:1.02rem; margin-bottom:3px}
+.handover-cta .txt span{font-size:13.5px; color:var(--ink-2)}
+.btn{display:inline-flex; align-items:center; gap:8px; background:var(--red); color:#fff; font-family:inherit;
+  font-weight:600; font-size:14px; text-decoration:none; border:none; border-radius:10px; padding:12px 18px; cursor:pointer; white-space:nowrap}
+.btn:hover{background:var(--red-deep)}
+.btn.ghost{background:transparent; color:var(--red-deep); border:1.5px solid var(--line)}
+.btn.ghost:hover{background:var(--tint)}
+.mani-tools{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 8px}
+.mani-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:14px; margin:8px 0}
+table.mani{border-collapse:collapse; width:100%; min-width:760px; background:var(--card)}
+table.mani th{background:var(--tint); font-weight:600; font-size:11.5px; letter-spacing:.02em; color:var(--ink-2);
+  text-align:left; padding:11px 13px; white-space:nowrap}
+table.mani td{border-top:1px solid var(--line); padding:0; vertical-align:top}
+table.mani td.cap{min-width:220px}
+table.mani input{width:100%; border:none; background:transparent; font:inherit; font-size:13.5px;
+  color:var(--ink); padding:11px 13px; outline:none}
+table.mani input::placeholder{color:var(--muted)}
+table.mani input:focus{background:var(--red-tint)}
+table.mani td.rm{text-align:center; width:42px}
+.rmbtn{border:none; background:transparent; color:var(--muted); cursor:pointer; font-size:15px; line-height:1; padding:8px}
+.rmbtn:hover{color:var(--red)}
+.cc{display:block; font-size:10.5px; color:var(--muted); padding:0 13px 8px}
+.cc.over{color:var(--red); font-weight:600}
+.mani-empty{padding:22px; text-align:center; color:var(--muted); font-size:14px}
+.mani-note{font-size:12.5px; color:var(--muted); margin-top:12px; max-width:70ch}
+textarea.export{position:absolute; left:-9999px; top:0; opacity:0}
+
 :focus-visible{outline:2px solid var(--red); outline-offset:3px}
 
 @media (max-width:760px){
@@ -424,6 +455,40 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
     </div>
   </section>
 
+  <section>
+    <div class="head"><span class="num">10</span><h2>Handover — criação → performance</h2></div>
+    <div class="prose"><p>Ao fechar uma rodada, a criação entrega os arquivos e o manifesto de copy para o time de performance subir. O ponto único de entrega é a pasta compartilhada no Drive.</p></div>
+
+    <div class="handover-cta">
+      <div class="txt"><b>Pasta de entrega no Drive</b><span>Suba aqui os vídeos (todos os ratios), frames de capa e a planilha de copy da rodada.</span></div>
+      <a class="btn" href="https://drive.google.com/drive/folders/1vWeivXL9g3WRZJAjCOO17MT9n-uK78Q4" target="_blank" rel="noopener">▸ Abrir pasta de entrega</a>
+    </div>
+
+    <h3>Fluxo de entrega</h3>
+    <ul class="clean">
+      <li>Exportar e nomear cada corte pela Seção 07, com todos os aspect ratios (9:16 / 1:1 / 16:9).</li>
+      <li>Subir arquivos e frames de capa na pasta acima, dentro de uma subpasta da rodada (ex.: <code class="inline">rodada_2026-XX</code>).</li>
+      <li>Preencher o manifesto de copy abaixo e subir junto — a nomenclatura tem que bater 1:1 com o nome do arquivo.</li>
+      <li>Avisar o time de performance que a rodada está pronta para subida.</li>
+    </ul>
+
+    <h3>Manifesto de copy da rodada</h3>
+    <div class="prose"><p style="font-size:14.5px;color:var(--ink-2)">Uma linha por criativo — é a planilha que performance usa na subida. Como <strong>utm_content = nome do anúncio</strong>, o campo <code class="inline">Arquivo</code> tem que ser o nome final do criativo.</p></div>
+    <div class="mani-tools">
+      <button class="btn" id="mAdd" type="button">＋ Adicionar linha</button>
+      <button class="btn ghost" id="mCopy" type="button">Copiar planilha (TSV)</button>
+      <button class="btn ghost" id="mClear" type="button">Limpar</button>
+    </div>
+    <div class="mani-wrap">
+      <table class="mani">
+        <thead><tr><th>Arquivo</th><th>Track</th><th>Conceito</th><th>Caption</th><th>CTA</th><th aria-label="remover"></th></tr></thead>
+        <tbody id="mBody"></tbody>
+      </table>
+    </div>
+    <p class="mani-note">O manifesto fica salvo apenas neste navegador (não é compartilhado entre pessoas). O registro oficial da entrega é a planilha copiada + os arquivos na pasta do Drive.</p>
+    <textarea class="export" id="mExport" aria-hidden="true" tabindex="-1"></textarea>
+  </section>
+
   <div class="rule" aria-hidden="true"></div>
 
 </div>
@@ -436,6 +501,68 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
     <p class="santander">Uma empresa Santander</p>
   </div>
 </footer>
+
+<script>
+(function(){
+  var KEY='wm_handover_manifest_v1';
+  var cols=[
+    {k:'arquivo',ph:'WEBMOTORS_COMP_INFEED_financiamento_hookA_15s_9x16_v01.mp4'},
+    {k:'track',ph:'COMP'},
+    {k:'conceito',ph:'financiamento'},
+    {k:'caption',ph:'Caption do anúncio…',cap:true},
+    {k:'cta',ph:'Baixar'}
+  ];
+  var body=document.getElementById('mBody');
+  function blank(){return {arquivo:'',track:'',conceito:'',caption:'',cta:''};}
+  function load(){try{var r=JSON.parse(localStorage.getItem(KEY));return Array.isArray(r)?r:[];}catch(e){return [];}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(rows));}catch(e){}}
+  var rows=load(); if(!rows.length) rows=[blank()];
+
+  function counter(el,val){var n=(val||'').length; el.textContent=n+' / 90'; el.className='cc'+(n>90?' over':'');}
+
+  function render(){
+    body.innerHTML='';
+    if(!rows.length){var e=document.createElement('tr');e.innerHTML='<td colspan="6" class="mani-empty">Nenhum criativo ainda. Clique em “Adicionar linha”.</td>';body.appendChild(e);return;}
+    rows.forEach(function(row,i){
+      var tr=document.createElement('tr');
+      cols.forEach(function(c){
+        var td=document.createElement('td'); if(c.cap) td.className='cap';
+        var inp=document.createElement('input');
+        inp.type='text'; inp.value=row[c.k]||''; inp.placeholder=c.ph; inp.setAttribute('aria-label',c.k);
+        var cc=null;
+        if(c.cap){cc=document.createElement('span'); cc.className='cc'; counter(cc,row[c.k]||'');}
+        inp.addEventListener('input',function(){rows[i][c.k]=inp.value; save(); if(cc)counter(cc,inp.value);});
+        td.appendChild(inp); if(cc)td.appendChild(cc);
+        tr.appendChild(td);
+      });
+      var rmtd=document.createElement('td'); rmtd.className='rm';
+      var b=document.createElement('button'); b.className='rmbtn'; b.type='button'; b.setAttribute('aria-label','remover linha'); b.textContent='✕';
+      b.addEventListener('click',function(){rows.splice(i,1); save(); render();});
+      rmtd.appendChild(b); tr.appendChild(rmtd);
+      body.appendChild(tr);
+    });
+  }
+
+  document.getElementById('mAdd').addEventListener('click',function(){rows.push(blank()); save(); render();});
+  document.getElementById('mClear').addEventListener('click',function(){if(confirm('Limpar todo o manifesto?')){rows=[blank()]; save(); render();}});
+  document.getElementById('mCopy').addEventListener('click',function(){
+    var head=['Arquivo','Track','Conceito','Caption','CTA'];
+    var lines=[head.join('\t')];
+    rows.forEach(function(r){
+      if(r.arquivo||r.caption||r.conceito||r.track||r.cta){
+        lines.push([r.arquivo,r.track,r.conceito,r.caption,r.cta].map(function(x){return (x||'').replace(/[\t\n]/g,' ');}).join('\t'));
+      }
+    });
+    var tsv=lines.join('\n'), btn=this, orig=btn.textContent;
+    var done=function(){btn.textContent='Copiado ✓'; setTimeout(function(){btn.textContent=orig;},1600);};
+    var fb=function(){var ta=document.getElementById('mExport'); ta.value=tsv; ta.select(); try{document.execCommand('copy');}catch(e){} };
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(tsv).then(done,function(){fb();done();});}
+    else{fb();done();}
+  });
+
+  render();
+})();
+</script>
 
 </body>
 </html>
