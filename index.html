@@ -335,6 +335,44 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
 .lane b{display:block; color:var(--ink); font-size:12px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:3px}
 .lane.me{background:var(--red-tint)} .lane.me b{color:var(--red-deep)}
 @media (max-width:760px){.lanes{grid-template-columns:1fr} .scope{grid-template-columns:1fr}}
+.stars.three{grid-template-columns:repeat(3,1fr)}
+.gears.rk .g{font-size:1.7rem}
+.gears.rk .gear:last-child{background:var(--red-tint); border-color:transparent}
+.gears.rk .gear:last-child .g,.gears.rk .gear:last-child h4{color:var(--red-deep)}
+.btn.pending{background:var(--tint); color:var(--muted); border:1.5px dashed var(--line); cursor:not-allowed; pointer-events:none}
+.plan-top{display:grid; grid-template-columns:1fr auto; gap:14px; align-items:center; margin:16px 0 18px}
+.plan-prog{display:flex; align-items:center; gap:12px; font-size:13.5px; color:var(--ink-2); font-weight:500}
+.pp-bar{flex:1; height:10px; border-radius:99px; background:var(--tint); overflow:hidden; min-width:120px}
+.pp-bar i{display:block; height:100%; width:0; background:var(--red); border-radius:99px; transition:width .25s}
+.golive{font-size:13px; color:var(--ink-2); background:var(--card); border:1px solid var(--line); border-radius:10px; padding:9px 13px}
+.golive b{color:var(--ink)}
+.team{margin:0 0 20px}
+.team-h{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:0 0 8px}
+.team-h .dot{width:10px; height:10px; border-radius:3px; background:var(--red)}
+.team[data-team="mt"] .dot{background:var(--ink)}
+.team-h b{font-weight:700; font-size:1.05rem}
+.team-h .sub{font-size:13px; color:var(--muted)}
+.team-h .cnt{margin-left:auto; font-size:12px; font-weight:700; color:var(--ink-2); background:var(--tint); border-radius:99px; padding:3px 10px}
+.team-h .cnt.done{background:#1F9D6A; color:#fff}
+table.plan{table-layout:fixed; min-width:720px}
+table.plan th:nth-child(2){width:42%} table.plan th:nth-child(3){width:22%} table.plan th:nth-child(4){width:20%} table.plan th:nth-child(5){width:84px}
+.plan-prog span{white-space:nowrap}
+table.plan td:first-child,table.plan th:first-child{width:44px; text-align:center}
+table.plan td.w{white-space:nowrap; font-weight:600; font-size:12.5px; color:var(--red-deep)}
+table.plan input{width:18px; height:18px; accent-color:var(--red); cursor:pointer; margin:0}
+table.plan tr.ok td:not(:first-child){color:var(--muted); text-decoration:line-through; text-decoration-color:var(--line)}
+@media (max-width:860px){.stars.three{grid-template-columns:1fr}}
+@media (max-width:760px){.plan-top{grid-template-columns:1fr}}
+.cad{margin:34px 0 0}
+.cad-tag{display:inline-block; vertical-align:middle; margin-left:8px; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); background:var(--tint); border:1px dashed var(--muted); border-radius:999px; padding:3px 10px}
+.cad-sub{font-size:14.5px; color:var(--ink-2); margin:-4px 0 14px}
+.cad-stage{border:1px solid var(--line); border-radius:18px; overflow-x:auto; background:var(--card)}
+.cad-stage svg{display:block; width:100%; height:auto; min-width:760px; font-family:"Poppins",system-ui,sans-serif}
+.cad-ctrl{display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin:12px 0 0}
+.cad-scenes{display:flex; flex-wrap:wrap; gap:6px}
+.cad-scenes button{font-family:inherit; font-size:12px; font-weight:600; color:var(--ink-2); background:var(--card);
+  border:1.5px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer}
+.cad-scenes button[aria-current="true"]{background:var(--ink); border-color:var(--ink); color:var(--paper)}
 :focus-visible{outline:2px solid var(--red); outline-offset:3px}
 
 @media (max-width:760px){
@@ -367,7 +405,7 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
         <div><dt>Cliente</dt><dd>Webmotors</dd></div>
         <div><dt>Área</dt><dd>Performance</dd></div>
         <div><dt>Canal</dt><dd>Orgânico + Ads</dd></div>
-        <div><dt>Versão</dt><dd>v2</dd></div>
+        <div><dt>Versão</dt><dd>v3</dd></div>
       </dl>
     </div>
     <div class="frame" aria-hidden="true">
@@ -396,7 +434,7 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
 
   <section>
     <div class="head"><span class="num">00</span><h2>Como usar este documento</h2></div>
-    <div class="prose"><p>O documento tem duas partes. A <strong>Parte A (E1–E7)</strong> é a camada estratégica: papel do TikTok na jornada, framework de marchas, as 9 editorias, pontes de conversão, cadência e métricas — vale para orgânico e Ads. A <strong>Parte B (01–10)</strong> é o padrão de produção de Ads: specs, matriz de variações, nomenclatura, UTMs e handover.</p><p>Regra de leitura: toda peça nasce de uma editoria da Parte A e é entregue no padrão da Parte B.</p></div>
+    <div class="prose"><p>O documento tem duas partes. A <strong>Parte A (E1–E8)</strong> é a camada estratégica: papel do TikTok na jornada, framework de marchas, as 9 editorias, pontes de conversão, pilar de remarketing &amp; leads, cadência e métricas. A <strong>Parte B (01–11)</strong> é a operação: specs, matriz de variações, nomenclatura, UTMs, handover e o <a href="#s11" style="color:var(--red);font-weight:600">plano de ação por time (Seção 11)</a>.</p><p>Regra de leitura: toda peça nasce de uma editoria da Parte A e é entregue no padrão da Parte B.</p></div>
     <div class="scope">
       <span class="ic" aria-hidden="true">i</span>
       <div>
@@ -431,8 +469,8 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
       <p class="lbl">Tese do canal</p>
       <p class="big">O TikTok não fecha a compra. Ele encurta o caminho até o simulador e até o app.</p>
     </div>
-    <h3>Duas conversões-norte</h3>
-    <div class="stars">
+    <h3>Três conversões-norte</h3>
+    <div class="stars three">
       <article class="star">
         <span class="tag">Norte 1 · Web</span>
         <h4>Simulação no site</h4>
@@ -445,8 +483,14 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
         <p>Instalação seguida de uso real: primeira busca, favorito, contato com anunciante. Install sem busca é vaidade — otimizar para o evento pós-install sempre que houver volume.</p>
         <p class="ev">install → first open → busca / lead no app</p>
       </article>
+      <article class="star">
+        <span class="tag">Norte 3 · Lead</span>
+        <h4>Lead qualificado</h4>
+        <p>Contato de quem já demonstrou interesse, capturado no remarketing. É o mais perto de uma venda que o canal chega — e onde a impressão barata do TikTok rende mais (E6).</p>
+        <p class="ev">lead (formulário instantâneo ou site) → lead qualificado</p>
+      </article>
     </div>
-    <p class="secondary"><strong>Conversões secundárias:</strong> anúncio cadastrado (Anunciante PF) e lead de plano (Lojista). Nomes de eventos e URLs das ferramentas <span class="flag">verificar</span> com o time de tracking/produto.</p>
+    <p class="secondary"><strong>Conversões secundárias:</strong> anúncio cadastrado (Anunciante PF) e lead de plano (Lojista). Nomes de eventos e URLs das ferramentas <span class="flag">verificar</span> com o Martech.</p>
 
     <h3>Quatro princípios que guiam tudo abaixo</h3>
     <div class="principles">
@@ -490,10 +534,10 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
       </article>
       <article class="gear">
         <div class="g">4<small>ª</small></div>
-        <h4>Ativação</h4>
-        <p class="role">Instalar o app e trazer de volta quem já engajou: retargeting e conversão direta.</p>
-        <p class="meta"><b>Julga:</b> CPI, custo por evento no app, custo por lead</p>
-        <p class="meta"><b>CTA:</b> Baixar / Cadastre-se (botão)</p>
+        <h4>Reimpacto &amp; lead</h4>
+        <p class="role">Voltar em quem já demonstrou interesse e converter em lead e instalação. É o pilar de remarketing (E6).</p>
+        <p class="meta"><b>Julga:</b> CPL, custo por lead qualificado, CPI</p>
+        <p class="meta"><b>CTA:</b> Receber simulação / Baixar (botão)</p>
         <div class="split"><div class="bar"><i class="o" style="width:10%"></i><i class="a" style="width:90%"></i></div>
           <div class="legend"><span><b>10</b> orgânico</span><span><b>90</b> ads</span></div></div>
       </article>
@@ -692,19 +736,94 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
           <tr><td class="rowkey">Orgânico</td><td>CTA falado + texto na tela (“busca [termo] na Webmotors”), comentário fixado, link no perfil <span class="flag">verificar</span> elegibilidade, video reply.</td><td>Busca de marca, acessos ao perfil, cliques no link</td></tr>
           <tr><td class="rowkey">Spark · web</td><td>Objetivo de conversões web, otimizando para simulação concluída. Destino = página da ferramenta com UTM.</td><td>Pixel + Events API · UTM (Seção 06)</td></tr>
           <tr><td class="rowkey">In-Feed · app</td><td>Objetivo de app promotion, otimizando para install ou evento no app. Deep link para a busca da editoria (faixa de preço, modelo).</td><td>SDK / MMP (Seção 01)</td></tr>
-          <tr><td class="rowkey">Retargeting</td><td>Públicos de engajamento de vídeo (visualização 6s/15s, interação) e visitantes do simulador que não concluíram.</td><td>Custo por conversão vs. prospecção</td></tr>
+          <tr><td class="rowkey">Remarketing</td><td>Públicos de engajamento e visitantes do simulador que não concluíram, com sequência criativa própria e captação de lead. Detalhado no pilar E6.</td><td>CPL · lead qualificado</td></tr>
           <tr><td class="rowkey">TikTok Search</td><td>Palavra-chave nos primeiros 5 segundos (falada e na tela) e na legenda. Avaliar anúncios em resultados de busca <span class="flag">verificar</span>.</td><td>Impressões de busca, CTR</td></tr>
         </tbody>
       </table>
     </div>
     <div class="note">
       <p class="tab">Pré-requisito técnico</p>
-      <p>A ponte só funciona se os eventos de <strong>simulação iniciada/concluída</strong> e <strong>avaliação concluída</strong> estiverem disparando no Pixel/Events API e mapeados para eventos de otimização do TikTok, e se o app tiver deep links por busca. Validar com tracking e produto antes da primeira rodada de Spark.</p>
+      <p>A ponte só funciona se os eventos de <strong>simulação iniciada/concluída</strong> e <strong>avaliação concluída</strong> estiverem disparando no Pixel/Events API e mapeados para eventos de otimização do TikTok, e se o app tiver deep links por busca. As tags são instaladas via <strong>Adobe Tags</strong>, então o responsável é o <strong>Martech</strong> — tarefas na Seção 11.</p>
     </div>
   </section>
 
-  <section id="e6">
-    <div class="head"><span class="num e">E6</span><h2>Cadência e calendário</h2></div>
+    <section id="e6">
+    <div class="head"><span class="num e">E6</span><h2>Pilar de remarketing &amp; leads</h2></div>
+    <div class="prose">
+      <p>O TikTok entrega impressão barata. Combinada com uma audiência que já levantou a mão — assistiu, interagiu, entrou no simulador —, é o lugar mais eficiente da conta para <strong>gerar lead</strong>. E lead de quem está com a troca na cabeça é o mais perto de uma venda que o canal consegue chegar.</p>
+      <p>Por isso o remarketing não é sobra de verba: é o pilar que transforma o alcance das marchas 1 e 2 em lead e instalação.</p>
+    </div>
+
+    <h3>Públicos e janelas</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Público</th><th>Origem</th><th>Janela</th><th>Nível de mensagem</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">Visitou simulador/avaliação e não concluiu</td><td>Pixel via Adobe (Martech)</td><td>3–14 dias</td><td>3 · Converter — maior intenção da conta</td></tr>
+          <tr><td class="rowkey">Viu anúncio de veículo ou fez busca no site</td><td>Pixel via Adobe (Martech)</td><td>7–14 dias</td><td>2–3 · modelo/faixa buscada</td></tr>
+          <tr><td class="rowkey">Engajados em vídeo (6s/15s, interação)</td><td>Engajamento TikTok</td><td>7–30 dias</td><td>1–2 · Lembrar / quebrar objeção</td></tr>
+          <tr><td class="rowkey">Interagiu com o perfil (visitou, seguiu)</td><td>Engajamento TikTok</td><td>30 dias</td><td>2 · Quebrar objeção</td></tr>
+          <tr><td class="rowkey">Instalou o app e não buscou</td><td>SDK/MMP (Martech)</td><td>7–30 dias</td><td>2 · reativar com busca por faixa</td></tr>
+          <tr><td class="rowkey">Exclusões</td><td>Pixel + lista CRM</td><td>30 dias</td><td>Leads e simulações concluídas saem do público</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="secondary">Públicos precisam de volume mínimo para veicular <span class="flag">verificar</span>. Nas primeiras semanas, janelas mais longas e públicos agrupados; segmentar quando houver escala.</p>
+
+    <h3>Sequência criativa em 3 níveis</h3>
+    <div class="gears rk">
+      <article class="gear">
+        <div class="g">N1</div>
+        <h4>Lembrar</h4>
+        <p class="role">Retoma a editoria que a pessoa viu, com um corte curto e um convite a continuar.</p>
+        <p class="meta"><b>Ex.:</b> “Ainda pensando no próximo carro? Vê o que cabe no seu bolso.”</p>
+        <p class="meta"><b>Base:</b> DUE, ACH, RAD</p>
+      </article>
+      <article class="gear">
+        <div class="g">N2</div>
+        <h4>Quebrar objeção</h4>
+        <p class="role">Ataca o medo que trava a decisão: golpe, parcela, avaliação injusta do usado.</p>
+        <p class="meta"><b>Ex.:</b> “Medo de levar prejuízo na troca? Descobre quanto o seu vale antes.”</p>
+        <p class="meta"><b>Base:</b> BLI, CUS, TRC</p>
+      </article>
+      <article class="gear">
+        <div class="g">N3</div>
+        <h4>Converter</h4>
+        <p class="role">CTA direto, peça curta (9–15s), uma ação só: receber a simulação ou deixar contato.</p>
+        <p class="meta"><b>Ex.:</b> “Receba sua simulação de troca em 2 minutos.”</p>
+        <p class="meta"><b>Destino:</b> formulário instantâneo ou simulador</p>
+      </article>
+      <article class="gear">
+        <div class="g">+</div>
+        <h4>Peças dedicadas</h4>
+        <p class="role">O feed atual não tem peças genéricas de “volta”. O remarketing ganha criativos próprios na matriz de produção (Seção 05), em vez de reaproveitar post.</p>
+      </article>
+    </div>
+
+    <h3>Lead: formulário instantâneo ou site?</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Destino</th><th>Quando usar</th><th>Prós / contras</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">Formulário instantâneo</td><td>Nível 3, principalmente para quem visitou o simulador sem concluir.</td><td>Menor atrito e CPL mais baixo; qualidade tende a cair sem perguntas qualificadoras.</td></tr>
+          <tr><td class="rowkey">Simulador no site</td><td>Níveis 2–3, quando a pessoa ainda precisa ver números.</td><td>Mais intenção e dado mais rico; mais atrito no caminho.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="clean mini">
+      <li><strong>Perguntas qualificadoras</strong> no formulário: modelo ou faixa de interesse, se tem carro para dar na troca, prazo de compra. Consentimento LGPD explícito.</li>
+      <li><strong>Testar os dois destinos</strong> e comparar por <strong>custo por lead qualificado</strong>, não só por CPL.</li>
+      <li><strong>Destino do lead</strong> (CRM, financiamento, lojista) e critério de “qualificado” definidos com a Webmotors antes de rodar <span class="flag">verificar</span>.</li>
+      <li><strong>Frequência:</strong> acompanhar semanalmente e girar criativos quando a frequência subir e o CTR cair — em média a cada 2–3 semanas.</li>
+    </ul>
+    <div class="note">
+      <p class="tab">KPIs do pilar</p>
+      <p>CPL · custo por lead qualificado · taxa de qualificação · taxa de contato efetivo · custo por simulação concluída em remarketing vs. prospecção.</p>
+    </div>
+  </section>
+
+<section id="e7">
+    <div class="head"><span class="num e">E7</span><h2>Cadência e calendário</h2></div>
     <div class="prose"><p>Sugestão de semana-tipo, pela ótica de performance, para alinhar com o calendário que o time de Social Media &amp; Conteúdo já opera. Não é uma grade paralela: a ideia é garantir que as editorias com maior potencial de conversão tenham presença constante no perfil e, portanto, material para Spark.</p></div>
     <div class="week">
       <div class="day"><p class="d">Seg</p><span class="c">RAD</span><p>Radar da semana: abre a pauta.</p></div>
@@ -728,7 +847,7 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
         <p class="tab">Mix de verba em Ads por marcha</p>
         <div class="mrow"><span>1ª–2ª (Spark)</span><div class="tr"><i style="width:20%"></i></div><b>20%</b></div>
         <div class="mrow"><span>3ª Simulação</span><div class="tr"><i style="width:45%"></i></div><b>45%</b></div>
-        <div class="mrow"><span>4ª Ativação</span><div class="tr"><i style="width:35%"></i></div><b>35%</b></div>
+        <div class="mrow"><span>4ª Reimpacto</span><div class="tr"><i style="width:35%"></i></div><b>35%</b></div>
       </div>
     </div>
 
@@ -757,8 +876,8 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
     </ul>
   </section>
 
-  <section id="e7">
-    <div class="head"><span class="num e">E7</span><h2>Tom, métricas e rito de leitura</h2></div>
+  <section id="e8">
+    <div class="head"><span class="num e">E8</span><h2>Tom, métricas e rito de leitura</h2></div>
     <div class="prose"><p>A Webmotors no TikTok é a amiga que entende de carro e de dinheiro: inteligente, direta, com leveza quando cabe. Nunca a marca tentando parecer mais jovem do que é.</p></div>
     <div class="dodont">
       <div class="dd yes"><p class="tab"><i>✓</i>Faz</p>
@@ -777,7 +896,7 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
           <tr><td class="rowkey">1ª Atração</td><td>Visualização completa · taxa de compartilhamento</td><td>&gt;50% em vídeos curtos · &gt;1% das views</td></tr>
           <tr><td class="rowkey">2ª Consideração</td><td>Salvamentos · comentários com pergunta de compra</td><td>Crescimento semana a semana</td></tr>
           <tr><td class="rowkey">3ª Simulação</td><td>Custo por simulação concluída · taxa de conclusão</td><td>Calibrar com histórico de mídia</td></tr>
-          <tr><td class="rowkey">4ª Ativação</td><td>CPI · custo por evento no app · custo por lead</td><td>Calibrar com histórico de mídia</td></tr>
+          <tr><td class="rowkey">4ª Reimpacto &amp; lead</td><td>CPL · custo por lead qualificado · CPI</td><td>Calibrar com histórico de mídia</td></tr>
         </tbody>
       </table>
     </div>
@@ -908,6 +1027,7 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
           <tr><td class="rowkey">Captions por vídeo</td><td class="pill">2–3</td><td>Ângulos de mensagem.</td></tr>
           <tr><td class="rowkey">CTA (lista fixa)</td><td class="pill">2</td><td>Teste de intenção.</td></tr>
           <tr><td class="rowkey">Aspect ratios</td><td class="pill">3</td><td>9:16 + 1:1 + 16:9 (fallback).</td></tr>
+          <tr><td class="rowkey">Criativos de remarketing</td><td class="pill">3 × 2</td><td>Um por nível (N1 lembrar, N2 objeção, N3 converter) × 2 variações, por track. Peças dedicadas, não reaproveitamento de post (E6).</td></tr>
         </tbody>
       </table>
     </div>
@@ -925,7 +1045,7 @@ td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--
 
   <section>
     <div class="head"><span class="num">06</span><h2>UTMs e rastreamento</h2></div>
-    <div class="prose"><p>Toda URL de destino <strong>web</strong> carrega UTMs + macros dinâmicas do TikTok, para atribuição consistente no CRM/CDP. Campanhas de <strong>app</strong> atribuem via SDK/eventos (Seção 01).</p></div>
+    <div class="prose"><p>Toda URL de destino <strong>web</strong> carrega UTMs + macros dinâmicas do TikTok, para atribuição consistente no CRM/CDP. Campanhas de <strong>app</strong> atribuem via SDK/eventos (Seção 01). Pixel e eventos web são instalados pelo <strong>Martech via Adobe Tags</strong>.</p></div>
     <h3>Template padrão</h3>
     <div class="code"><pre>https://[dominio-webmotors]/[lp]?utm_source=tiktok&amp;utm_medium=paid_social
   &amp;utm_campaign=<span class="hl">__CAMPAIGN_NAME__</span>&amp;utm_content=<span class="hl">__CID_NAME__</span>
@@ -996,6 +1116,8 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
       <li><span class="box"></span> Specs conferidas contra a spec sheet viva do TikTok</li>
       <li><span class="box"></span> Editoria (E3) e marcha (E2) definidas no manifesto</li>
       <li><span class="box"></span> Ponte de conversão explícita: CTA + destino (E5)</li>
+      <li><span class="box"></span> Peças de remarketing entregues por nível (N1–N3)</li>
+      <li><span class="box"></span> Eventos validados pelo Martech antes da subida</li>
     </ul>
     <div class="slab">
       <div class="strip" aria-hidden="true"></div>
@@ -1014,7 +1136,7 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
 
     <div class="handover-cta">
       <div class="txt"><b>Pasta de entrega no Drive</b><span>Suba aqui os vídeos (todos os ratios), frames de capa e a planilha de copy da rodada.</span></div>
-      <a class="btn" href="https://drive.google.com/drive/folders/1vWeivXL9g3WRZJAjCOO17MT9n-uK78Q4" target="_blank" rel="noopener">▸ Abrir pasta de entrega</a>
+      <a class="btn" href="https://drive.google.com/drive/folders/1dAy0D6dKPZwvrahAEoop7-xxBl5Xc8ym?usp=sharing" target="_blank" rel="noopener">▸ Abrir pasta de entrega</a>
     </div>
 
     <h3>Fluxo de entrega</h3>
@@ -1042,6 +1164,108 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
     <textarea class="export" id="mExport" aria-hidden="true" tabindex="-1"></textarea>
   </section>
 
+  <section id="s11">
+    <div class="head"><span class="num">11</span><h2>Plano de ação — times e responsáveis</h2></div>
+    <div class="prose"><p>O que precisa acontecer para operar de fato, por time. Janelas contadas a partir do kickoff. Marque o status conforme avança — ele fica salvo neste navegador. No fim da seção, a <a href="#cadencia" style="color:var(--red);font-weight:600">cadência em movimento</a> mostra o fluxo idealizado.</p></div>
+    <div class="plan-top">
+      <div class="plan-prog"><div class="pp-bar"><i id="ppFill"></i></div><span id="ppTxt">0 de 0 tarefas concluídas</span></div>
+      <div class="golive"><b>Go-live previsto:</b> fim da semana 3, condicionado aos eventos do Martech validados no TikTok.</div>
+    </div>
+    <div id="plan">
+
+      <div class="team" data-team="mt">
+        <div class="team-h"><span class="dot"></span><b>Martech</b><span class="sub">Tracking &amp; produto · tags via Adobe</span><span class="cnt"></span></div>
+        <div class="scroll"><table class="plan">
+          <thead><tr><th></th><th>Tarefa</th><th>Pronto quando</th><th>Depende de</th><th>Janela</th></tr></thead>
+          <tbody>
+            <tr><td><input type="checkbox" data-id="mt1" aria-label="concluída"></td><td>Instalar o TikTok Pixel via Adobe Tags em todo o site, respeitando o consentimento (CMP/LGPD)</td><td>PageView validado no Events Manager</td><td>Privacidade</td><td class="w">S1</td></tr>
+            <tr><td><input type="checkbox" data-id="mt2" aria-label="concluída"></td><td>Configurar eventos de simulação iniciada/concluída, avaliação concluída e lead no Adobe → TikTok</td><td>Eventos com parâmetros no Events Manager</td><td>Dicionário de eventos (Performance)</td><td class="w">S1–S2</td></tr>
+            <tr><td><input type="checkbox" data-id="mt3" aria-label="concluída"></td><td>Ativar Events API (server-side) via Adobe Event Forwarding <span class="flag">verificar</span></td><td>Deduplicação Pixel/servidor ativa</td><td>Pixel instalado</td><td class="w">S2–S3</td></tr>
+            <tr><td><input type="checkbox" data-id="mt4" aria-label="concluída"></td><td>SDK/MMP do app enviando install, first open e busca para o TikTok</td><td>Eventos de app no Events Manager</td><td>Time de app</td><td class="w">S2–S3</td></tr>
+            <tr><td><input type="checkbox" data-id="mt5" aria-label="concluída"></td><td>Disponibilizar deep links por busca (faixa de preço, modelo)</td><td>Lista de deep links testados</td><td>Time de app</td><td class="w">S2–S3</td></tr>
+            <tr><td><input type="checkbox" data-id="mt6" aria-label="concluída"></td><td>Integrar leads do formulário instantâneo ao CRM</td><td>Lead chega no CRM com origem tiktok</td><td>Destino do lead definido</td><td class="w">S3</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="team" data-team="pf">
+        <div class="team-h"><span class="dot"></span><b>Performance</b><span class="sub">Mídia, públicos e leitura</span><span class="cnt"></span></div>
+        <div class="scroll"><table class="plan">
+          <thead><tr><th></th><th>Tarefa</th><th>Pronto quando</th><th>Depende de</th><th>Janela</th></tr></thead>
+          <tbody>
+            <tr><td><input type="checkbox" data-id="pf1" aria-label="concluída"></td><td>Entregar ao Martech o dicionário de eventos e o mapeamento para eventos de otimização do TikTok</td><td>Documento aprovado pelo Martech</td><td>—</td><td class="w">S1</td></tr>
+            <tr><td><input type="checkbox" data-id="pf2" aria-label="concluída"></td><td>Definir com a Webmotors destino do lead e critério de lead qualificado</td><td>Critério registrado</td><td>Webmotors</td><td class="w">S1</td></tr>
+            <tr><td><input type="checkbox" data-id="pf3" aria-label="concluída"></td><td>Montar estrutura de campanhas: prospecção web, app promotion, remarketing/lead</td><td>Campanhas criadas em rascunho</td><td>Nomenclatura (Seção 07)</td><td class="w">S2</td></tr>
+            <tr><td><input type="checkbox" data-id="pf4" aria-label="concluída"></td><td>Criar públicos de remarketing e exclusões (E6)</td><td>Públicos populando</td><td>Pixel e SDK ativos</td><td class="w">S2–S3</td></tr>
+            <tr><td><input type="checkbox" data-id="pf5" aria-label="concluída"></td><td>Configurar formulário instantâneo com perguntas qualificadoras</td><td>Formulário aprovado</td><td>Copy (Conteúdo) · CRM (Martech)</td><td class="w">S3</td></tr>
+            <tr><td><input type="checkbox" data-id="pf6" aria-label="concluída"></td><td>Atualizar o link da pasta de entrega (Seção 10) com a pasta da Caliber</td><td>Link novo publicado</td><td>Link enviado pelo Artur</td><td class="w">S1</td></tr>
+            <tr><td><input type="checkbox" data-id="pf7" aria-label="concluída"></td><td>Iniciar rito semanal de Spark e leitura por editoria</td><td>Primeira leitura compartilhada</td><td>Go-live</td><td class="w">S4</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="team" data-team="sm">
+        <div class="team-h"><span class="dot"></span><b>Social</b><span class="sub">Perfil e comunidade</span><span class="cnt"></span></div>
+        <div class="scroll"><table class="plan">
+          <thead><tr><th></th><th>Tarefa</th><th>Pronto quando</th><th>Depende de</th><th>Janela</th></tr></thead>
+          <tbody>
+            <tr><td><input type="checkbox" data-id="sm1" aria-label="concluída"></td><td>Mapear os posts atuais do perfil por editoria e marcha</td><td>Planilha de mapeamento</td><td>—</td><td class="w">S1</td></tr>
+            <tr><td><input type="checkbox" data-id="sm2" aria-label="concluída"></td><td>Alinhar o calendário orgânico às editorias de maior potencial de conversão</td><td>Calendário do mês revisado</td><td>Performance</td><td class="w">S1–S2</td></tr>
+            <tr><td><input type="checkbox" data-id="sm3" aria-label="concluída"></td><td>Liberar códigos de autorização de Spark dos posts selecionados</td><td>Códigos enviados a Performance</td><td>Rito semanal</td><td class="w">Contínuo</td></tr>
+            <tr><td><input type="checkbox" data-id="sm4" aria-label="concluída"></td><td>Repassar comentários com intenção de compra e perguntas recorrentes</td><td>Resumo semanal enviado</td><td>—</td><td class="w">Contínuo</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="team" data-team="ct">
+        <div class="team-h"><span class="dot"></span><b>Conteúdo</b><span class="sub">Roteiro, copy e creators</span><span class="cnt"></span></div>
+        <div class="scroll"><table class="plan">
+          <thead><tr><th></th><th>Tarefa</th><th>Pronto quando</th><th>Depende de</th><th>Janela</th></tr></thead>
+          <tbody>
+            <tr><td><input type="checkbox" data-id="ct1" aria-label="concluída"></td><td>Roteiros do primeiro lote (TRC, CUS, BOL) no formato do roteiro-modelo (E4)</td><td>Roteiros aprovados</td><td>—</td><td class="w">S1–S2</td></tr>
+            <tr><td><input type="checkbox" data-id="ct2" aria-label="concluída"></td><td>Roteiros de remarketing nos 3 níveis, por track (E6)</td><td>Roteiros aprovados</td><td>Critério de lead</td><td class="w">S2</td></tr>
+            <tr><td><input type="checkbox" data-id="ct3" aria-label="concluída"></td><td>Copies e captions no manifesto + textos do formulário instantâneo</td><td>Manifesto preenchido</td><td>Roteiros</td><td class="w">S2</td></tr>
+            <tr><td><input type="checkbox" data-id="ct4" aria-label="concluída"></td><td>Brief e seleção de creators, com direito de uso para Spark em contrato</td><td>Creators contratados</td><td>Orçamento</td><td class="w">S2–S3</td></tr>
+            <tr><td><input type="checkbox" data-id="ct5" aria-label="concluída"></td><td>Validar peças de financiamento com jurídico (CET, valores ilustrativos)</td><td>Aprovação registrada</td><td>Jurídico</td><td class="w">S2</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+      <div class="team" data-team="ds">
+        <div class="team-h"><span class="dot"></span><b>Design</b><span class="sub">Produção e entrega</span><span class="cnt"></span></div>
+        <div class="scroll"><table class="plan">
+          <thead><tr><th></th><th>Tarefa</th><th>Pronto quando</th><th>Depende de</th><th>Janela</th></tr></thead>
+          <tbody>
+            <tr><td><input type="checkbox" data-id="ds1" aria-label="concluída"></td><td>Templates de texto na tela, safe zone e end cards de CTA padrão</td><td>Templates aprovados</td><td>—</td><td class="w">S2</td></tr>
+            <tr><td><input type="checkbox" data-id="ds2" aria-label="concluída"></td><td>Produzir o lote inicial conforme matriz (Seção 05) e specs (Seção 03)</td><td>Cortes exportados</td><td>Roteiros</td><td class="w">S2–S3</td></tr>
+            <tr><td><input type="checkbox" data-id="ds3" aria-label="concluída"></td><td>Produzir as peças de remarketing (N1, N2, N3)</td><td>Cortes exportados</td><td>Roteiros de remarketing</td><td class="w">S3</td></tr>
+            <tr><td><input type="checkbox" data-id="ds4" aria-label="concluída"></td><td>Entregar na pasta do Drive com nomenclatura (Seção 07) + manifesto</td><td>Rodada sinalizada a Performance</td><td>Link da pasta atualizado</td><td class="w">S3</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+
+    </div>
+    <div class="cad" id="cadencia">
+      <h3>Cadência em movimento <span class="cad-tag">Idealização</span></h3>
+      <p class="cad-sub">Esquema e flow para indicar a cadência ideal: quem entra, quem faz o quê, como o rollout acontece e o que avaliamos depois. É uma referência ilustrativa — prazos, responsáveis e dependências reais seguem o plano de ação acima.</p>
+      <div class="cad-stage">
+        <svg id="cadSvg" viewBox="0 0 1200 675" role="img" aria-labelledby="cadT cadD">
+          <title id="cadT">Cadência ideal do projeto TikTok performance — esquema ilustrativo · Webmotors</title>
+          <desc id="cadD">Animação em seis cenas: kickoff com os cinco times e a Webmotors; fundação com dicionário de eventos e Pixel via Adobe Tags; produção com roteiros, design, jurídico e entrega no Drive; go-live condicionado aos eventos validados pelo Martech; rito semanal do orgânico ao Spark, remarketing N1 a N3 e lead; e avaliação nas semanas 6 a 8 para escalar ou ajustar.</desc>
+          <rect width="1200" height="675" rx="18" fill="var(--card)"/>
+          <g id="cadStatic"></g>
+          <g id="cadDyn"></g>
+          <g id="cadTop"></g>
+        </svg>
+      </div>
+      <div class="cad-ctrl">
+        <button class="btn ghost" id="cadPlay" type="button">❚❚ Pausar</button>
+        <div class="cad-scenes" id="cadScenes" role="group" aria-label="Ir para a cena"></div>
+      </div>
+    </div>
+
+  </section>
+
   <div class="rule" aria-hidden="true"></div>
 
 </div>
@@ -1050,7 +1274,7 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
 <footer class="foot">
   <div class="wrap">
     <p class="wm">webmotors</p>
-    <p><b>Briefing TikTok — Estratégia &amp; Produção.</b> Plano de mídia de performance, v2 (Parte A: camada estratégica de performance · Parte B: produção de Ads). Complementa, e não substitui, o plano de conteúdo orgânico de Social Media &amp; Conteúdo Criativo. Itens marcados <span style="color:var(--red);font-weight:600">verificar</span> devem ser validados na spec sheet viva do TikTok na data da produção.</p>
+    <p><b>Briefing TikTok — Estratégia &amp; Produção.</b> Plano de mídia de performance, v3 (Parte A: camada estratégica, incluindo pilar de remarketing &amp; leads · Parte B: produção de Ads e plano de ação por time). Complementa, e não substitui, o plano de conteúdo orgânico de Social Media &amp; Conteúdo Criativo. Itens marcados <span style="color:var(--red);font-weight:600">verificar</span> devem ser validados na spec sheet viva do TikTok na data da produção.</p>
     <p class="santander">Uma empresa Santander</p>
   </div>
 </footer>
@@ -1128,5 +1352,224 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
   });});
 })();
 </script>
+<script>
+(function(){
+  var KEY='wm_action_plan_v1', st={};
+  try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){st={};}
+  var boxes=document.querySelectorAll('#plan input[type=checkbox]');
+  function paint(){
+    var tot=0,done=0;
+    document.querySelectorAll('#plan .team').forEach(function(t){
+      var b=t.querySelectorAll('input[type=checkbox]'),d=0;
+      b.forEach(function(x){if(x.checked)d++; x.closest('tr').classList.toggle('ok',x.checked);});
+      var c=t.querySelector('.cnt'); c.textContent=d+'/'+b.length; c.classList.toggle('done',d===b.length);
+      tot+=b.length; done+=d;
+    });
+    document.getElementById('ppFill').style.width=(tot?done/tot*100:0)+'%';
+    document.getElementById('ppTxt').textContent=done+' de '+tot+' tarefas concluídas';
+  }
+  boxes.forEach(function(x){
+    x.checked=!!st[x.dataset.id];
+    x.addEventListener('change',function(){st[x.dataset.id]=x.checked; try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){} paint();});
+  });
+  paint();
+})();
+</script>
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg', svg=document.getElementById('cadSvg'); if(!svg) return;
+  var ST=document.getElementById('cadStatic'), DY=document.getElementById('cadDyn'), TP=document.getElementById('cadTop');
+  function el(tag,a,parent,txt){var e=document.createElementNS(NS,tag); for(var k in a) e.setAttribute(k,a[k]); if(txt!=null) e.textContent=txt; (parent||svg).appendChild(e); return e;}
+  function clamp(v){return v<0?0:v>1?1:v;}
+  function ease(p){return p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;}
+  function at(kf,t){var n=kf.length; if(t<=kf[0][0]) return kf[0]; if(t>=kf[n-1][0]) return kf[n-1];
+    for(var i=0;i<n-1;i++){ if(t<kf[i+1][0]){ var a=kf[i],b=kf[i+1],p=ease((t-a[0])/(b[0]-a[0])),r=[t];
+      for(var j=1;j<a.length;j++) r.push(a[j]+(b[j]-a[j])*p); return r; } } return kf[n-1];}
+  var L=32, X0=250, WK=115, BOT=596;
+  var SC=[[0,4,'Kickoff','quem entra'],[4,10,'Fundação','tracking e roteiros'],[10,15.5,'Produção','criação, jurídico e entrega'],
+          [15.5,19,'Go-live','o portão do rollout'],[19,25,'Rito semanal','do orgânico ao lead'],[25,32,'Avaliação','escalar ou ajustar']];
+  var CAP=[[0,2.4,'Cinco times entram no projeto, cada um na sua raia.'],
+    [2.4,4,'Performance orquestra; a Webmotors aprova e define o destino do lead.'],
+    [4,5.9,'Performance entrega o dicionário de eventos ao Martech.'],
+    [5.9,7.8,'Martech instala o Pixel e os eventos via Adobe Tags.'],
+    [7.8,10,'Social mapeia os posts, Conteúdo roteiriza, Webmotors define o lead.'],
+    [10,11.9,'Roteiros viram lote inicial e peças de remarketing no Design.'],
+    [11.9,13.3,'As peças passam pelo jurídico da Webmotors.'],
+    [13.3,15.5,'Entrega no Drive com manifesto; Performance monta as campanhas.'],
+    [15.5,17,'O go-live só abre com os eventos validados pelo Martech.'],
+    [17,19,'Três frentes no ar: web, app e remarketing/lead.'],
+    [19,21,'Social publica; Performance impulsiona o melhor via Spark.'],
+    [21,23.1,'Remarketing N1 → N2 → N3 gera o lead qualificado.'],
+    [23.1,25,'Aprendizados voltam como pauta para Social e Conteúdo.'],
+    [25,28.3,'Semanas 6 a 8: leitura do ciclo com dados reais.'],
+    [28.3,32,'Decisão: escalar o que funciona ou ajustar a rota.']];
+
+  /* ---------- estático: grade, raias ---------- */
+  for(var w=1;w<=8;w++){
+    var x=X0+(w-1)*WK;
+    el('line',{x1:x,y1:102,x2:x,y2:BOT,stroke:'var(--line)','stroke-width':1,'stroke-dasharray':'3 5'},ST);
+  }
+  el('line',{x1:X0+8*WK,y1:102,x2:X0+8*WK,y2:BOT,stroke:'var(--line)','stroke-width':1,'stroke-dasharray':'3 5'},ST);
+  var wkLbl=[]; for(w=1;w<=8;w++){ wkLbl.push(el('text',{x:X0+(w-1)*WK+WK/2,y:93,'text-anchor':'middle','font-size':12.5,'font-weight':700,fill:'var(--muted)'},ST,'S'+w)); }
+  var LANES=[{n:'Webmotors',s:'aprovações',y:108,h:32,thin:1,on:2.3},
+    {n:'Martech',s:'tags via Adobe',y:148,h:84,on:.3},{n:'Performance',s:'orquestra · mídia',y:238,h:84,on:.7},
+    {n:'Social',s:'perfil · Spark',y:328,h:84,on:1.1},{n:'Conteúdo',s:'roteiro · copy',y:418,h:84,on:1.5},
+    {n:'Design',s:'produção · entrega',y:508,h:84,on:1.9}];
+  var laneG=[];
+  LANES.forEach(function(ln,i){
+    var g=el('g',{},ST);
+    el('rect',{x:20,y:ln.y,width:1165,height:ln.h,rx:ln.thin?8:12,fill:'var(--tint)'},g);
+    if(ln.thin){ var tx=el('text',{x:36,y:ln.y+21,'font-size':12,'font-weight':700,fill:'var(--ink)'},g,ln.n);
+      el('tspan',{fill:'var(--muted)','font-weight':500},tx,'  ·  '+ln.s); }
+    else { el('rect',{x:20,y:ln.y,width:5,height:ln.h,rx:2,fill:i===2?'var(--red)':'var(--ink)'},g);
+      el('text',{x:38,y:ln.y+38,'font-size':15,'font-weight':700,fill:'var(--ink)'},g,ln.n);
+      el('text',{x:38,y:ln.y+57,'font-size':11.5,'font-weight':500,fill:'var(--muted)'},g,ln.s); }
+    laneG.push({g:g,on:ln.on});
+  });
+  var perfHi=el('rect',{x:20,y:238,width:1165,height:84,rx:12,fill:'none',stroke:'var(--red)','stroke-width':2},ST);
+
+  /* ---------- topo: cena, progresso, legenda ---------- */
+  el('rect',{x:20,y:18,width:64,height:30,rx:8,fill:'var(--red)'},TP);
+  var chip=el('text',{x:52,y:38,'text-anchor':'middle','font-size':13,'font-weight':700,fill:'#fff'},TP,'01/06');
+  var ttl=el('text',{x:98,y:40,'font-size':21,'font-weight':700,fill:'var(--ink)','letter-spacing':'-.01em'},TP);
+  var ttlA=el('tspan',{},ttl,''), ttlB=el('tspan',{fill:'var(--muted)','font-weight':500},ttl,'');
+  el('text',{x:1174,y:56,'text-anchor':'end','font-size':11,'font-weight':600,fill:'var(--muted)','letter-spacing':'.04em'},TP,'ESQUEMA IDEALIZADO · ILUSTRATIVO');
+  var seg=[]; for(var s=0;s<6;s++){ var sx=868+s*52; el('rect',{x:sx,y:30,width:46,height:6,rx:3,fill:'var(--tint)'},TP);
+    seg.push(el('rect',{x:sx,y:30,width:0,height:6,rx:3,fill:'var(--red)'},TP)); }
+  el('rect',{x:20,y:606,width:1165,height:52,rx:12,fill:'var(--tint)'},TP);
+  el('rect',{x:20,y:606,width:5,height:52,rx:2,fill:'var(--red)'},TP);
+  var cap=el('text',{x:44,y:638,'font-size':15.5,'font-weight':600,fill:'var(--ink)'},TP,'');
+  el('text',{x:1165,y:638,'text-anchor':'end','font-size':17,'font-weight':800,fill:'var(--red)','letter-spacing':'-.03em'},TP,'webmotors');
+  var ph=el('g',{},ST);
+  el('line',{x1:0,y1:100,x2:0,y2:BOT,stroke:'var(--ink)','stroke-width':1.6,'stroke-dasharray':'2 3'},ph);
+  el('path',{d:'M-6 96 L6 96 L0 104 Z',fill:'var(--ink)'},ph);
+
+  /* ---------- dinâmico ---------- */
+  var items=[], draws=[], fades=[];
+  var STY={card:['var(--card)','var(--line)','var(--ink)'],hot:['var(--red)','none','#fff'],dark:['var(--ink)','none','var(--paper)'],
+           ok:['#1F9D6A','none','#fff'],soft:['var(--red-tint)','none','var(--red-deep)']};
+  function box(st,label,w,h,kf){ var g=el('g',{opacity:0},DY), c=STY[st];
+    el('rect',{width:w,height:h,rx:h/2.6,fill:c[0],stroke:c[1],'stroke-width':1.2},g);
+    el('text',{x:w/2,y:h/2+4.3,'text-anchor':'middle','font-size':h>26?12.5:11.5,'font-weight':600,fill:c[2]},g,label);
+    items.push({g:g,kf:kf}); return g; }
+  function A(st,l,w,kf){return box(st,l,w,30,kf);}   /* card */
+  function P(st,l,w,kf){return box(st,l,w,24,kf);}   /* pill */
+  function F(node,kf){ node.setAttribute('opacity',0); fades.push({n:node,kf:kf}); return node; }
+  function D(node,a,b,kf){ var len=node.getTotalLength?node.getTotalLength():600; node.setAttribute('stroke-dasharray',len);
+    draws.push({n:node,len:len,a:a,b:b,kf:kf}); return node; }
+
+  /* cena 2 — fundação */
+  A('hot','Dicionário de eventos',160,[[4.3,258,284,0],[4.6,258,284,1],[5.1,258,284,1],[5.8,258,194,1],[6.0,258,194,0]]);
+  A('dark','Pixel · Adobe Tags',142,[[5.8,258,158,0],[6.1,258,158,1]]);
+  P('soft','simulação',90,[[6.6,408,161,0],[6.9,408,161,1]]);
+  P('soft','avaliação',90,[[7.0,504,161,0],[7.3,504,161,1]]);
+  P('soft','lead',56,[[7.4,408,197,0],[7.7,408,197,1]]);
+  A('card','Mapa de posts',124,[[5.2,258,338,0],[5.5,258,338,1]]);
+  A('card','Roteiros TRC · CUS · BOL',186,[[6.0,258,428,0],[6.3,258,428,1],[10.3,258,428,1],[11.1,490,518,1],[11.3,490,518,0]]);
+  A('card','Critério de lead',130,[[7.8,258,248,0],[8.1,258,248,1]]);
+  P('ok','Lead: destino definido',172,[[8.3,258,112,0],[8.6,258,112,1]]);
+  /* cena 3 — produção */
+  A('card','Campanhas + públicos',174,[[11.0,396,248,0],[11.3,396,248,1]]);
+  A('card','Lote inicial',104,[[11.2,490,518,0],[11.5,490,518,1]]);
+  A('hot','Remarketing N1–N3',152,[[11.5,490,554,0],[11.8,490,554,1]]);
+  A('card','Peças',66,[[11.9,500,518,0],[12.05,500,518,1],[12.8,500,109,1],[13.0,500,109,0]]);
+  P('ok','Jurídico ok',92,[[12.8,470,112,0],[13.0,470,112,1]]);
+  A('hot','Drive + manifesto',146,[[13.3,400,554,0],[13.5,400,554,1],[14.4,400,284,1]]);
+  /* cena 4 — go-live */
+  var gc=F(el('g',{},DY),[[15.7,0],[16.0,1],[17.0,1],[17.2,0]]);
+  el('line',{x1:598,y1:104,x2:598,y2:BOT,stroke:'var(--muted)','stroke-width':2,'stroke-dasharray':'6 5'},gc);
+  el('rect',{x:606,y:110,width:132,height:28,rx:9,fill:'var(--card)',stroke:'var(--muted)','stroke-width':1.2},gc);
+  el('text',{x:672,y:128.5,'text-anchor':'middle','font-size':11.5,'font-weight':700,fill:'var(--muted)'},gc,'Go-live · fechado');
+  var go=F(el('g',{},DY),[[17.0,0],[17.25,1]]);
+  el('line',{x1:598,y1:104,x2:598,y2:BOT,stroke:'var(--red)','stroke-width':3},go);
+  el('rect',{x:606,y:110,width:132,height:28,rx:9,fill:'var(--red)'},go);
+  el('text',{x:672,y:128.5,'text-anchor':'middle','font-size':11.5,'font-weight':700,fill:'#fff'},go,'Go-live · aberto');
+  DY.insertBefore(go,DY.firstChild); DY.insertBefore(gc,DY.firstChild);
+  A('hot','Eventos validados',146,[[16.1,606,194,0],[16.4,606,194,1]]);
+  var rails=[['Prospecção web',264],['App promotion',288],['Remarketing / lead',312]];
+  rails.forEach(function(r,i){
+    var ln=el('path',{d:'M602 '+r[1]+' L1170 '+r[1],stroke:'var(--red)','stroke-width':2.5,fill:'none','stroke-linecap':'round'},DY);
+    DY.insertBefore(ln,DY.firstChild);
+    D(ln,17.3+i*.25,18.3+i*.25,[[17.2,1],[19.0,1],[19.4,.28]]);
+    F(el('text',{x:760,y:r[1]-5,'font-size':11,'font-weight':700,fill:'var(--red-deep)'},DY,r[0]),[[17.5+i*.25,0],[17.8+i*.25,1],[19.0,1],[19.3,0]]);
+  });
+  /* cena 5 — rito semanal */
+  A('card','Post orgânico',118,[[19.3,606,338,0],[19.6,606,338,1]]);
+  A('hot','Spark',72,[[20.0,632,338,0],[20.2,632,338,1],[20.9,632,248,1]]);
+  P('card','N1',46,[[21.1,712,251,0],[21.35,712,251,1]]);
+  P('card','N2',46,[[21.5,764,251,0],[21.75,764,251,1]]);
+  P('hot','N3',46,[[21.9,816,251,0],[22.15,816,251,1]]);
+  A('ok','Lead',66,[[22.4,868,248,0],[22.7,868,248,1]]);
+  D(el('path',{d:'M901 246 L901 138',stroke:'var(--ink)','stroke-width':1.5,fill:'none','stroke-dasharray':'4 4'},DY),22.8,23.1,[[22.7,1]]);
+  P('dark','CRM',58,[[22.9,872,113,0],[23.15,872,113,1]]);
+  var ring=F(el('g',{},DY),[[19.5,0],[19.8,1]]);
+  var ringR=el('g',{},ring);
+  el('path',{d:'M752 389 m-11 0 a11 11 0 1 1 5 9.2',fill:'none',stroke:'var(--red)','stroke-width':2.4,'stroke-linecap':'round'},ringR);
+  el('path',{d:'M741.5 398 l-1.5 -7 l7 2.5 z',fill:'var(--red)'},ringR);
+  el('text',{x:770,y:393.5,'font-size':11.5,'font-weight':700,fill:'var(--red-deep)'},ring,'rito semanal');
+  var back=el('path',{d:'M901 280 C 901 430, 830 479, 728 479',fill:'none',stroke:'var(--ink)','stroke-width':2,'stroke-linecap':'round'},DY);
+  D(back,23.2,24.0,[[23.1,1]]);
+  F(el('path',{d:'M736 473 L726 479 L736 485',fill:'none',stroke:'var(--ink)','stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'},DY),[[23.9,0],[24.0,1]]);
+  A('dark','Aprendizados',112,[[23.9,606,464,0],[24.2,606,464,1]]);
+  P('soft','Pauta nova',92,[[24.2,606,377,0],[24.45,606,377,1]]);
+  /* cena 6 — avaliação */
+  var pan=el('g',{opacity:0},DY); items.push({g:pan,kf:[[25.1,985,148,0],[25.6,940,148,1]]});
+  el('rect',{width:245,height:444,rx:14,fill:'var(--card)',stroke:'var(--ink)','stroke-width':1.6},pan);
+  el('text',{x:20,y:38,'font-size':16,'font-weight':700,fill:'var(--ink)'},pan,'Avaliação · S6–S8');
+  el('text',{x:20,y:57,'font-size':11.5,'font-weight':500,fill:'var(--muted)'},pan,'o que decidimos com dados');
+  var ROWS=[['Custo por simulação','remarketing vs. prospecção'],['Lead qualificado','CPL e taxa de qualificação'],
+            ['Editorias','quais ficam, quais saem'],['Pesos orgânico × ads','recalibrar as 4 marchas']];
+  ROWS.forEach(function(r,i){ var y=84+i*60;
+    el('rect',{x:20,y:y,width:22,height:22,rx:6,fill:'none',stroke:'var(--line)','stroke-width':1.6},pan);
+    el('text',{x:54,y:y+11,'font-size':13,'font-weight':700,fill:'var(--ink)'},pan,r[0]);
+    el('text',{x:54,y:y+28,'font-size':11,'font-weight':500,fill:'var(--muted)'},pan,r[1]);
+    var ck=F(el('g',{},DY),[[25.9+i*.6,0],[26.1+i*.6,1]]);
+    el('rect',{x:960,y:148+y,width:22,height:22,rx:6,fill:'var(--red)'},ck);
+    el('path',{d:'M'+(965.5)+' '+(148+y+11.5)+' l4 4 l7.5 -8',fill:'none',stroke:'#fff','stroke-width':2.4,'stroke-linecap':'round','stroke-linejoin':'round'},ck);
+  });
+  var dec=F(el('g',{},DY),[[28.3,0],[28.6,1]]);
+  el('rect',{x:960,y:488,width:205,height:78,rx:12,fill:'var(--red)'},dec);
+  el('text',{x:1062.5,y:521,'text-anchor':'middle','font-size':16.5,'font-weight':700,fill:'#fff'},dec,'Escalar ou ajustar?');
+  el('text',{x:1062.5,y:544,'text-anchor':'middle','font-size':11.5,'font-weight':500,fill:'#FFD3DB'},dec,'decisão de rollout');
+
+  var PH=[[0,250],[4,250],[10,480],[15.5,595],[19,598],[25,825],[30,1170],[32,1170]];
+
+  var curScene=-1, curCap=-1;
+  function render(t){
+    var m=t>31?clamp(1-(t-31)/.6):1;
+    laneG.forEach(function(l){ l.g.setAttribute('opacity',(.18+.82*clamp((t-l.on)/.4))*(0.35+0.65*m)); });
+    perfHi.setAttribute('opacity',clamp((t-2.6)/.4)*m);
+    items.forEach(function(it){ var v=at(it.kf,t); it.g.setAttribute('transform','translate('+v[1].toFixed(1)+','+v[2].toFixed(1)+')'); it.g.setAttribute('opacity',(v[3]*m).toFixed(3)); });
+    fades.forEach(function(f){ f.n.setAttribute('opacity',(at(f.kf,t)[1]*m).toFixed(3)); });
+    draws.forEach(function(d){ var p=clamp((t-d.a)/(d.b-d.a)); d.n.setAttribute('stroke-dashoffset',(d.len*(1-ease(p))).toFixed(1));
+      d.n.setAttribute('opacity',((t<d.a?0:1)*at(d.kf,t)[1]*m).toFixed(3)); });
+    ringR.setAttribute('transform','rotate('+((t*110)%360).toFixed(1)+' 752 389)');
+    var x=at(PH,t)[1]; ph.setAttribute('transform','translate('+x.toFixed(1)+',0)'); ph.setAttribute('opacity',m);
+    var wi=Math.min(7,Math.max(0,Math.floor((x-X0-0.5)/WK)));
+    wkLbl.forEach(function(lb,i){ lb.setAttribute('fill',i===wi?'var(--red)':'var(--muted)'); });
+    for(var s=0;s<6;s++){ var sc=SC[s]; seg[s].setAttribute('width',(46*clamp((t-sc[0])/(sc[1]-sc[0]))).toFixed(1));
+      if(t>=sc[0]&&t<sc[1]&&curScene!==s){ curScene=s; chip.textContent='0'+(s+1)+'/06'; ttlA.textContent=sc[2]; ttlB.textContent='  ·  '+sc[3]; markBtn(s); } }
+    var sc0=SC[curScene]; ttl.setAttribute('opacity',clamp((t-sc0[0])/.35));
+    for(var c=0;c<CAP.length;c++){ if(t>=CAP[c][0]&&t<CAP[c][1]){ if(curCap!==c){curCap=c; cap.textContent=CAP[c][2];}
+      cap.setAttribute('opacity',clamp((t-CAP[c][0])/.25)); break; } }
+  }
+
+  /* ---------- controles ---------- */
+  var btns=[], sb=document.getElementById('cadScenes');
+  SC.forEach(function(sc,i){ var b=document.createElement('button'); b.type='button'; b.textContent=(i+1)+' · '+sc[2];
+    b.addEventListener('click',function(){ T=sc[0]+.01; render(T); }); sb.appendChild(b); btns.push(b); });
+  function markBtn(s){ btns.forEach(function(b,i){ b.setAttribute('aria-current',i===s?'true':'false'); }); }
+  var T=0, last=null, playing=true, visible=true, pb=document.getElementById('cadPlay');
+  function setPlay(v){ playing=v; pb.textContent=v?'❚❚ Pausar':'▶ Reproduzir'; }
+  pb.addEventListener('click',function(){ setPlay(!playing); });
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches){ T=29; setPlay(false); }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(e){ visible=e[0].isIntersecting; },{threshold:.15}).observe(svg); }
+  function loop(ts){ if(last==null) last=ts; var dt=Math.min(.1,(ts-last)/1000); last=ts;
+    if(playing&&visible){ T=(T+dt)%L; render(T); } requestAnimationFrame(loop); }
+  render(T); requestAnimationFrame(loop);
+  window.__cad={render:render,pause:function(){setPlay(false);},L:L};
+})();
+</script>
+
 </body>
 </html>
