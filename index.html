@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Briefing TikTok Ads — Webmotors</title>
+<title>Briefing TikTok — Estratégia &amp; Produção · Webmotors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -162,7 +162,7 @@ code.inline{font-family:"IBM Plex Mono",monospace; font-size:.85em; background:v
 .btn.ghost:hover{background:var(--tint)}
 .mani-tools{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 8px}
 .mani-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:14px; margin:8px 0}
-table.mani{border-collapse:collapse; width:100%; min-width:760px; background:var(--card)}
+table.mani{border-collapse:collapse; width:100%; min-width:860px; background:var(--card)}
 table.mani th{background:var(--tint); font-weight:600; font-size:11.5px; letter-spacing:.02em; color:var(--ink-2);
   text-align:left; padding:11px 13px; white-space:nowrap}
 table.mani td{border-top:1px solid var(--line); padding:0; vertical-align:top}
@@ -180,6 +180,161 @@ table.mani td.rm{text-align:center; width:42px}
 .mani-note{font-size:12.5px; color:var(--muted); margin-top:12px; max-width:70ch}
 textarea.export{position:absolute; left:-9999px; top:0; opacity:0}
 
+
+/* ================= PARTE A — ESTRATÉGIA ================= */
+.part{margin:58px 0 0; padding:24px 26px; border-radius:16px; background:var(--bar); color:#fff;
+  position:relative; overflow:hidden; display:flex; align-items:center; gap:18px}
+.part .strip{position:absolute; top:0; right:0; width:160px; height:100%;
+  background:repeating-linear-gradient(115deg, var(--red) 0 12px, transparent 12px 24px); opacity:.35}
+.part .letter{font-weight:800; font-size:2.8rem; line-height:1; color:var(--red); letter-spacing:-.04em; position:relative}
+.part .ptxt{position:relative}
+.part .ptxt b{display:block; font-weight:700; font-size:1.25rem; letter-spacing:-.02em}
+.part .ptxt span{font-size:13.5px; color:#B7B6C0}
+.part + section{margin-top:40px}
+.num.e{font-size:13px}
+
+/* tese */
+.thesis{background:var(--red); color:#fff; border-radius:16px; padding:26px 28px; margin:20px 0; position:relative; overflow:hidden}
+.thesis::after{content:""; position:absolute; right:-30px; top:0; width:180px; height:100%;
+  background:repeating-linear-gradient(115deg, rgba(255,255,255,.14) 0 12px, transparent 12px 24px)}
+.thesis .lbl{font-size:11.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:#FFD3DB; margin:0 0 8px; position:relative}
+.thesis p.big{font-weight:700; font-size:clamp(1.15rem,2.6vw,1.5rem); line-height:1.25; letter-spacing:-.02em; margin:0; max-width:34ch; position:relative}
+
+.stars{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:18px 0}
+.star{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px 22px}
+.star .tag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--red-deep); background:var(--red-tint); border-radius:999px; padding:4px 10px; margin-bottom:12px}
+.star h4{font-weight:700; font-size:1.12rem; margin:0 0 6px; letter-spacing:-.01em}
+.star p{font-size:14.5px; color:var(--ink-2); margin:0 0 10px}
+.star .ev{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-2); border-top:1px dashed var(--line); padding-top:10px}
+.secondary{font-size:13.5px; color:var(--ink-2); margin:4px 0 0}
+
+.principles{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:18px 0 0}
+.principle{background:var(--tint); border-radius:12px; padding:15px 17px}
+.principle b{display:block; font-weight:700; font-size:14.5px; margin-bottom:3px}
+.principle span{font-size:13.5px; color:var(--ink-2); line-height:1.45}
+
+/* marchas */
+.gears{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin:20px 0}
+.gear{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:20px 18px 18px; display:flex; flex-direction:column}
+.gear .g{font-weight:800; font-size:2.3rem; line-height:1; letter-spacing:-.04em; color:var(--red)}
+.gear .g small{font-size:.45em; font-weight:700; vertical-align:top; margin-left:1px}
+.gear h4{font-weight:700; font-size:1.02rem; margin:10px 0 4px}
+.gear .role{font-size:13.5px; color:var(--ink-2); line-height:1.45; margin:0 0 12px}
+.gear .meta{font-size:12px; color:var(--ink-2); margin:0 0 6px; line-height:1.45}
+.gear .meta b{color:var(--ink); font-weight:600}
+.gear .split{margin-top:auto; padding-top:12px}
+.gear .bar{display:flex; height:8px; border-radius:99px; overflow:hidden; background:var(--tint)}
+.gear .bar i{display:block; height:100%}
+.gear .bar .o{background:var(--ink-2)} .gear .bar .a{background:var(--red)}
+.gear .legend{display:flex; justify-content:space-between; font-size:11px; color:var(--muted); margin-top:6px; font-weight:500}
+.gear .legend b{color:var(--ink-2); font-weight:600}
+
+/* editorias */
+.chips{display:flex; flex-wrap:wrap; gap:8px; margin:16px 0 18px}
+.chip{font-family:inherit; font-size:13px; font-weight:600; color:var(--ink-2); background:var(--card);
+  border:1.5px solid var(--line); border-radius:999px; padding:7px 14px; cursor:pointer}
+.chip:hover{border-color:var(--muted)}
+.chip[aria-pressed="true"]{background:var(--red); border-color:var(--red); color:#fff}
+.eds{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+.ed{background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px 18px 16px;
+  display:flex; flex-direction:column; position:relative; overflow:hidden; transition:opacity .15s}
+.ed::before{content:""; position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--red)}
+.ed[hidden]{display:none}
+.ed .top{display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px}
+.ed .ecode{font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600; color:var(--red-deep);
+  background:var(--red-tint); border-radius:6px; padding:3px 8px}
+.ed .idx{font-weight:800; font-size:1.35rem; color:var(--line); letter-spacing:-.03em}
+:root:not([data-theme="light"]) .ed .idx{color:var(--muted)}
+.ed h4{font-weight:700; font-size:1.06rem; letter-spacing:-.015em; margin:0 0 4px}
+.ed .q{font-size:13.5px; color:var(--ink-2); font-style:italic; margin:0 0 12px}
+.ed dl{margin:0; display:grid; gap:9px}
+.ed dt{font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0}
+.ed dd{font-size:13.5px; line-height:1.45; margin:1px 0 0; color:var(--ink)}
+.ed dd.hook{font-weight:600}
+.ed .foot2{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:14px}
+.t{font-size:11px; font-weight:600; border-radius:6px; padding:3px 8px; background:var(--tint); color:var(--ink-2); white-space:nowrap}
+.t.m{background:transparent; border:1px solid var(--line)}
+.t.warn{background:var(--red-tint); color:var(--red-deep)}
+
+/* roteiro */
+.rot-head{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0}
+.rot-head div{background:var(--tint); border-radius:12px; padding:13px 15px}
+.rot-head b{display:block; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:3px}
+.rot-head span{font-size:14px; font-weight:600}
+td.tc{font-family:"IBM Plex Mono",monospace; font-size:12.5px; white-space:nowrap; color:var(--red-deep); font-weight:600}
+td .ost{display:inline-block; font-size:12px; font-weight:600; background:var(--ink); color:var(--paper); border-radius:5px; padding:2px 7px; margin-top:6px}
+
+/* fluxo */
+.flow{display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin:20px 0 8px; counter-reset:fl}
+.fstep{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 13px; position:relative}
+.fstep::before{counter-increment:fl; content:counter(fl); display:grid; place-items:center; width:24px; height:24px;
+  border-radius:7px; background:var(--red); color:#fff; font-weight:700; font-size:12px; margin-bottom:9px}
+.fstep:not(:last-child)::after{content:""; position:absolute; right:-9px; top:24px; width:8px; height:8px;
+  border-top:2px solid var(--red); border-right:2px solid var(--red); transform:rotate(45deg); z-index:2}
+.fstep b{display:block; font-size:13.5px; font-weight:700; margin-bottom:3px; line-height:1.25}
+.fstep span{font-size:12.5px; color:var(--ink-2); line-height:1.4; display:block}
+.loop{display:flex; align-items:center; gap:10px; font-size:13px; color:var(--ink-2); margin:6px 0 18px;
+  border:1.5px dashed var(--red); border-radius:12px; padding:10px 14px}
+.loop i{font-style:normal; color:var(--red); font-weight:800; font-size:17px}
+
+/* calendário */
+.week{display:grid; grid-template-columns:repeat(7,1fr); gap:8px; margin:16px 0}
+.day{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 10px; min-height:112px}
+.day .d{font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin:0 0 8px}
+.day .c{font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:600; color:var(--red-deep); background:var(--red-tint);
+  border-radius:6px; padding:2px 7px; display:inline-block; margin-bottom:6px}
+.day p{font-size:12.5px; color:var(--ink-2); line-height:1.35; margin:0}
+.day.alt{background:var(--tint); border-style:dashed}
+.mix{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:18px 0}
+.mixcard{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px}
+.mixcard .tab{font-weight:700; font-size:14px; margin:0 0 12px}
+.mrow{display:grid; grid-template-columns:110px 1fr 40px; align-items:center; gap:10px; margin:0 0 9px; font-size:13px; color:var(--ink-2)}
+.mrow .tr{height:8px; border-radius:99px; background:var(--tint); overflow:hidden}
+.mrow .tr i{display:block; height:100%; background:var(--red); border-radius:99px}
+.mrow b{text-align:right; color:var(--ink); font-weight:700}
+
+/* tom */
+.dodont{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin:18px 0}
+.dd{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px}
+.dd .tab{font-weight:700; font-size:14px; margin:0 0 10px; display:flex; align-items:center; gap:8px}
+.dd .tab i{font-style:normal; width:22px; height:22px; border-radius:6px; display:grid; place-items:center; font-size:12px; color:#fff}
+.dd.yes .tab i{background:#1F9D6A} .dd.no .tab i{background:var(--red)}
+.dd ul{margin:0; padding-left:18px} .dd li{font-size:14px; color:var(--ink-2); margin:0 0 7px} .dd li:last-child{margin:0}
+.rite{counter-reset:rt; list-style:none; padding:0; margin:14px 0 0; display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
+.rite li{counter-increment:rt; background:var(--tint); border-radius:12px; padding:13px 15px 13px 50px; position:relative; font-size:14px; color:var(--ink-2)}
+.rite li::before{content:counter(rt); position:absolute; left:14px; top:12px; width:24px; height:24px; border-radius:7px;
+  background:var(--ink); color:var(--paper); display:grid; place-items:center; font-weight:700; font-size:12px}
+.rite li b{color:var(--ink)}
+
+@media (max-width:860px){
+  .gears{grid-template-columns:repeat(2,1fr)}
+  .eds{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:repeat(3,1fr)}
+  .fstep:nth-child(3)::after{display:none}
+  .week{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:760px){
+  .stars,.principles,.mix,.dodont,.rite,.rot-head{grid-template-columns:1fr}
+  .eds{grid-template-columns:1fr}
+  .flow{grid-template-columns:repeat(2,1fr)}
+  .fstep::after{display:none}
+  .week{grid-template-columns:repeat(2,1fr)}
+  .part{padding:20px}
+}
+
+.scope{display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:start; background:var(--card);
+  border:1.5px solid var(--ink); border-radius:16px; padding:22px 24px; margin:18px 0}
+.scope .ic{width:42px; height:42px; border-radius:12px; background:var(--ink); color:var(--paper);
+  display:grid; place-items:center; font-weight:800; font-size:18px}
+.scope .tab{font-weight:700; font-size:15px; margin:0 0 8px}
+.scope p{font-size:14.5px; color:var(--ink-2); margin:0 0 9px} .scope p:last-child{margin:0}
+.scope strong{color:var(--ink)}
+.lanes{display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:12px 0 0}
+.lane{background:var(--tint); border-radius:10px; padding:12px 14px; font-size:13.5px; color:var(--ink-2); line-height:1.45}
+.lane b{display:block; color:var(--ink); font-size:12px; letter-spacing:.04em; text-transform:uppercase; margin-bottom:3px}
+.lane.me{background:var(--red-tint)} .lane.me b{color:var(--red-deep)}
+@media (max-width:760px){.lanes{grid-template-columns:1fr} .scope{grid-template-columns:1fr}}
 :focus-visible{outline:2px solid var(--red); outline-offset:3px}
 
 @media (max-width:760px){
@@ -205,14 +360,14 @@ textarea.export{position:absolute; left:-9999px; top:0; opacity:0}
   <div class="wrap">
     <div>
       <p class="wordmark">webmotors</p>
-      <p class="kicker">Performance · Paid Social · TikTok Ads</p>
-      <h1>Briefing de Produção<em>Guia de specs e entregáveis para a agência criativa</em></h1>
-      <p class="tagline">Padrão único de specs, variações, nomenclatura e rastreamento. Peça fora do padrão volta para ajuste.</p>
+      <p class="kicker">Estratégia · Orgânico + Paid Social · TikTok</p>
+      <h1>Estratégia &amp; Produção<em>Editorias, framework, specs e entregáveis para a agência criativa</em></h1>
+      <p class="tagline">O que publicar, por quê, e como cada vídeo leva à simulação no site e ao app. Depois, o padrão único de specs e entregáveis.</p>
       <dl class="metagrid">
         <div><dt>Cliente</dt><dd>Webmotors</dd></div>
         <div><dt>Área</dt><dd>Performance</dd></div>
-        <div><dt>Canal</dt><dd>TikTok · Leilão</dd></div>
-        <div><dt>Versão</dt><dd>v1</dd></div>
+        <div><dt>Canal</dt><dd>Orgânico + Ads</dd></div>
+        <div><dt>Versão</dt><dd>v2</dd></div>
       </dl>
     </div>
     <div class="frame" aria-hidden="true">
@@ -241,12 +396,407 @@ textarea.export{position:absolute; left:-9999px; top:0; opacity:0}
 
   <section>
     <div class="head"><span class="num">00</span><h2>Como usar este documento</h2></div>
-    <div class="prose"><p>Padrão de entrega para todos os assets de TikTok Ads. Cada peça precisa respeitar as specs técnicas, a matriz de variações, a nomenclatura e a parametrização de UTM aqui definidas.</p></div>
+    <div class="prose"><p>O documento tem duas partes. A <strong>Parte A (E1–E7)</strong> é a camada estratégica: papel do TikTok na jornada, framework de marchas, as 9 editorias, pontes de conversão, cadência e métricas — vale para orgânico e Ads. A <strong>Parte B (01–10)</strong> é o padrão de produção de Ads: specs, matriz de variações, nomenclatura, UTMs e handover.</p><p>Regra de leitura: toda peça nasce de uma editoria da Parte A e é entregue no padrão da Parte B.</p></div>
+    <div class="scope">
+      <span class="ic" aria-hidden="true">i</span>
+      <div>
+        <p class="tab">Escopo: camada adicional de mídia de performance</p>
+        <p>Este documento propõe o uso do TikTok como <strong>mídia de performance</strong>. Ele <strong>não substitui nem exclui</strong> o plano de produção de conteúdo orgânico gerido pelo time de <strong>Social Media &amp; Conteúdo Criativo</strong>, que segue dono da linha editorial, do calendário e da gestão do perfil.</p>
+        <p>As editorias, marchas e a cadência da Parte A são a lente de performance sobre o conteúdo: indicam o que tem mais potencial de virar simulação e app install, e servem como insumo para alinhamento entre os dois times.</p>
+        <div class="lanes">
+          <div class="lane"><b>Social Media &amp; Conteúdo</b>Estratégia orgânica, calendário do perfil, community management e produção dos posts.</div>
+          <div class="lane me"><b>Performance (este plano)</b>Seleção de posts para Spark, criativos dedicados de Ads, verba, eventos de conversão e retargeting.</div>
+        </div>
+      </div>
+    </div>
     <div class="note">
       <p class="tab">Validação obrigatória</p>
       <p>Os itens marcados com <span class="flag">verificar</span> — limites de caracteres, tamanho de arquivo, duração e specs de carrossel — devem ser conferidos na spec sheet oficial do <strong>TikTok Ads Manager / Business Help Center</strong> na data da produção. O TikTok muda esses parâmetros com frequência.</p>
     </div>
   </section>
+
+  <div class="part">
+    <div class="strip" aria-hidden="true"></div>
+    <span class="letter">A</span>
+    <div class="ptxt"><b>Estratégia de conteúdo</b><span>Camada de performance sobre o conteúdo · complementa o plano orgânico de Social Media</span></div>
+  </div>
+
+  <section id="e1">
+    <div class="head"><span class="num e">E1</span><h2>O papel do TikTok na jornada</h2></div>
+    <div class="prose">
+      <p>Trocar ou comprar carro é uma decisão longa, cheia de pesquisa e de medo de errar. No TikTok, essa pesquisa acontece em vídeo curto: “vale a pena?”, “quanto custa por mês?”, “quanto vale o meu?”, “é golpe?”. É ali que o desejo nasce e boa parte da dúvida é resolvida, muitas vezes antes de qualquer busca no Google.</p>
+      <p>O trabalho da Webmotors na plataforma é ser a resposta mais confiável nesse momento e entregar a pessoa, já decidida a agir, na ferramenta certa. O conteúdo orgânico do time de Social Media constrói essa presença; a camada de performance proposta aqui soma mídia para transformar essa presença em simulação e instalação.</p>
+    </div>
+    <div class="thesis">
+      <p class="lbl">Tese do canal</p>
+      <p class="big">O TikTok não fecha a compra. Ele encurta o caminho até o simulador e até o app.</p>
+    </div>
+    <h3>Duas conversões-norte</h3>
+    <div class="stars">
+      <article class="star">
+        <span class="tag">Norte 1 · Web</span>
+        <h4>Simulação no site</h4>
+        <p>Simulação de financiamento e avaliação do usado para troca. É o momento em que o interesse vira intenção medida — e o dado mais valioso para o parceiro financeiro.</p>
+        <p class="ev">simulação iniciada → simulação concluída · avaliação concluída</p>
+      </article>
+      <article class="star">
+        <span class="tag">Norte 2 · App</span>
+        <h4>Instalação do app</h4>
+        <p>Instalação seguida de uso real: primeira busca, favorito, contato com anunciante. Install sem busca é vaidade — otimizar para o evento pós-install sempre que houver volume.</p>
+        <p class="ev">install → first open → busca / lead no app</p>
+      </article>
+    </div>
+    <p class="secondary"><strong>Conversões secundárias:</strong> anúncio cadastrado (Anunciante PF) e lead de plano (Lojista). Nomes de eventos e URLs das ferramentas <span class="flag">verificar</span> com o time de tracking/produto.</p>
+
+    <h3>Quatro princípios que guiam tudo abaixo</h3>
+    <div class="principles">
+      <div class="principle"><b>Utilidade antes da oferta</b><span>Todo vídeo entrega uma resposta ou um achado antes de pedir qualquer coisa. Venda direta sem valor é rolada para cima.</span></div>
+      <div class="principle"><b>Orgânico testa, Ads escala</b><span>Os posts do perfil, produzidos por Social Media, funcionam como laboratório. Os que provam retenção e intenção viram Spark Ad com objetivo de conversão, em comum acordo com o time.</span></div>
+      <div class="principle"><b>Todo vídeo tem uma ponte</b><span>Uma próxima ação clara e única: simular, avaliar, buscar no app. Sem ponte, o alcance não vira negócio.</span></div>
+      <div class="principle"><b>Busca é distribuição</b><span>O TikTok funciona como buscador. A palavra-chave aparece falada, na tela e na legenda (“carro até 80 mil”, “quanto vale meu carro”).</span></div>
+    </div>
+  </section>
+
+  <section id="e2">
+    <div class="head"><span class="num e">E2</span><h2>Framework — o motor de 4 marchas</h2></div>
+    <div class="prose"><p>Cada peça, orgânica ou paga, pertence a uma marcha. A marcha define o papel do vídeo, a métrica que o julga, o CTA e quanto ele depende de mídia. Um calendário saudável gira as quatro; uma conta de Ads saudável concentra verba nas duas últimas, alimentada pelas duas primeiras.</p></div>
+    <div class="gears">
+      <article class="gear">
+        <div class="g">1<small>ª</small></div>
+        <h4>Atração</h4>
+        <p class="role">Parar o scroll e formar audiência qualificada de gente interessada em carro.</p>
+        <p class="meta"><b>Julga:</b> retenção, compartilhamento, seguidores</p>
+        <p class="meta"><b>CTA:</b> seguir, comentar, votar</p>
+        <div class="split"><div class="bar"><i class="o" style="width:70%"></i><i class="a" style="width:30%"></i></div>
+          <div class="legend"><span><b>70</b> orgânico</span><span><b>30</b> ads</span></div></div>
+      </article>
+      <article class="gear">
+        <div class="g">2<small>ª</small></div>
+        <h4>Consideração</h4>
+        <p class="role">Tirar a dúvida real de compra, troca ou venda. É onde nasce a confiança na marca.</p>
+        <p class="meta"><b>Julga:</b> conclusão, salvamentos, comentários com pergunta</p>
+        <p class="meta"><b>CTA:</b> “busca na Webmotors”</p>
+        <div class="split"><div class="bar"><i class="o" style="width:60%"></i><i class="a" style="width:40%"></i></div>
+          <div class="legend"><span><b>60</b> orgânico</span><span><b>40</b> ads</span></div></div>
+      </article>
+      <article class="gear">
+        <div class="g">3<small>ª</small></div>
+        <h4>Simulação</h4>
+        <p class="role">Levar para a ferramenta: simular parcela, avaliar o usado, montar a troca.</p>
+        <p class="meta"><b>Julga:</b> CTR, custo por simulação, taxa de conclusão</p>
+        <p class="meta"><b>CTA:</b> “simula a sua” / “descobre quanto vale”</p>
+        <div class="split"><div class="bar"><i class="o" style="width:30%"></i><i class="a" style="width:70%"></i></div>
+          <div class="legend"><span><b>30</b> orgânico</span><span><b>70</b> ads</span></div></div>
+      </article>
+      <article class="gear">
+        <div class="g">4<small>ª</small></div>
+        <h4>Ativação</h4>
+        <p class="role">Instalar o app e trazer de volta quem já engajou: retargeting e conversão direta.</p>
+        <p class="meta"><b>Julga:</b> CPI, custo por evento no app, custo por lead</p>
+        <p class="meta"><b>CTA:</b> Baixar / Cadastre-se (botão)</p>
+        <div class="split"><div class="bar"><i class="o" style="width:10%"></i><i class="a" style="width:90%"></i></div>
+          <div class="legend"><span><b>10</b> orgânico</span><span><b>90</b> ads</span></div></div>
+      </article>
+    </div>
+    <div class="note grey">
+      <p class="tab">Como a barra orgânico/ads deve ser lida</p>
+      <p>É o peso relativo de esforço de cada canal naquela marcha — não um split de verba. Na 1ª marcha a mídia só amplia o que já funciona no perfil; na 4ª o orgânico praticamente não converte sozinho. Proporções são o ponto de partida; recalibrar após as primeiras 4–6 semanas de leitura.</p>
+    </div>
+  </section>
+
+  <section id="e3">
+    <div class="head"><span class="num e">E3</span><h2>As 9 editorias</h2></div>
+    <div class="prose"><p>Cada editoria responde a uma pergunta real do público e tem uma ponte de conversão própria. O código de 3 letras entra no manifesto de copy (Seção 10) para que performance leia resultado por editoria, sem mexer na nomenclatura de arquivo já aprovada.</p></div>
+    <div class="chips" role="group" aria-label="Filtrar editorias por audiência">
+      <button class="chip" type="button" data-f="all" aria-pressed="true">Todas</button>
+      <button class="chip" type="button" data-f="COMP" aria-pressed="false">Comprador</button>
+      <button class="chip" type="button" data-f="ANPF" aria-pressed="false">Anunciante PF</button>
+      <button class="chip" type="button" data-f="LOJA" aria-pressed="false">Lojista</button>
+    </div>
+    <div class="eds" id="eds">
+
+      <article class="ed" data-track="COMP">
+        <div class="top"><span class="ecode">CUS</span><span class="idx">01</span></div>
+        <h4>Quanto custa de verdade</h4>
+        <p class="q">“Cabe no meu bolso além da parcela?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Esse SUV de R$ 110 mil custa bem mais que a parcela. Fiz a conta do mês inteiro.”</dd></div>
+          <div><dt>Formato</dt><dd>Talking head com números na tela: parcela, seguro, IPVA, combustível, revisão. Carrossel como versão foto.</dd></div>
+          <div><dt>Ponte</dt><dd>Simulador de financiamento (web): “simula a sua parcela”.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t m">2ª · 3ª marcha</span><span class="t warn">valores ilustrativos + CET</span></div>
+      </article>
+
+      <article class="ed" data-track="COMP">
+        <div class="top"><span class="ecode">BOL</span><span class="idx">02</span></div>
+        <h4>Cabe no bolso</h4>
+        <p class="q">“O que dá pra comprar com o que eu tenho?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“O que R$ 60 mil compram na Webmotors hoje — 3 opções com cara de zero.”</dd></div>
+          <div><dt>Formato</dt><dd>Screen recording do app aplicando o filtro de preço, intercalado com takes limpos dos carros. Série por faixa.</dd></div>
+          <div><dt>Ponte</dt><dd>Deep link para a busca já filtrada no app. Editoria-âncora de app install.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t m">2ª · 4ª marcha</span></div>
+      </article>
+
+      <article class="ed" data-track="COMP ANPF">
+        <div class="top"><span class="ecode">TRC</span><span class="idx">03</span></div>
+        <h4>Hora de trocar</h4>
+        <p class="q">“Meu carro serve de entrada? Já tá na hora?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Antes de trocar de carro, descobre quanto o seu vale. Leva dois minutos.”</dd></div>
+          <div><dt>Formato</dt><dd>Talking head + avaliação feita na tela, depois simulação usando o valor como entrada. Sinais de que o carro “ficou pequeno”.</dd></div>
+          <div><dt>Ponte</dt><dd>Avaliação do usado → simulação com entrada. É a editoria que materializa a “simulação de troca”.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t">Anunciante PF</span><span class="t m">2ª · 3ª marcha</span></div>
+      </article>
+
+      <article class="ed" data-track="COMP">
+        <div class="top"><span class="ecode">DUE</span><span class="idx">04</span></div>
+        <h4>Esse ou esse?</h4>
+        <p class="q">“Qual escolher na mesma faixa de preço?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Mesmo preço, vida diferente: sedan ou SUV compacto até R$ 100 mil?”</dd></div>
+          <div><dt>Formato</dt><dd>Split-screen lado a lado (porta-malas, consumo, custo). Voto nos comentários; o vencedor ganha video reply.</dd></div>
+          <div><dt>Ponte</dt><dd>Busca dos dois modelos no app. Quem assistiu/comentou vira audiência de retargeting.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t m">1ª · 2ª marcha</span></div>
+      </article>
+
+      <article class="ed" data-track="COMP LOJA">
+        <div class="top"><span class="ecode">RAD</span><span class="idx">05</span></div>
+        <h4>Radar Webmotors</h4>
+        <p class="q">“O que está acontecendo com o mercado de carros?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Os 5 carros mais buscados na Webmotors este mês. O primeiro surpreende.”</dd></div>
+          <div><dt>Formato</dt><dd>Apresentador fixo + gráfico na tela. Série recorrente com dados proprietários; newsjacking (IPVA, reajustes, lançamentos).</dd></div>
+          <div><dt>Ponte</dt><dd>Autoridade de marca + busca do modelo citado. Alimenta também o discurso para lojistas.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t">Lojista</span><span class="t m">1ª marcha</span><span class="t warn">dado validado antes</span></div>
+      </article>
+
+      <article class="ed" data-track="COMP">
+        <div class="top"><span class="ecode">ACH</span><span class="idx">06</span></div>
+        <h4>Achados da plataforma</h4>
+        <p class="q">“O que tem de mais interessante à venda agora?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Um clássico em estado de museu está à venda na Webmotors agora.”</dd></div>
+          <div><dt>Formato</dt><dd>Car photography: detalhe de interior, painel, porta-malas, som do motor. Narração elegante, sem gritaria.</dd></div>
+          <div><dt>Ponte</dt><dd>Anúncio específico / app. Topo de funil com desejo aspiracional e alto potencial de share.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t m">1ª marcha</span><span class="t warn">autorização do anunciante</span></div>
+      </article>
+
+      <article class="ed" data-track="COMP ANPF">
+        <div class="top"><span class="ecode">BLI</span><span class="idx">07</span></div>
+        <h4>Compra blindada</h4>
+        <p class="q">“Como não cair em golpe nem levar bomba?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“3 sinais de que esse anúncio é golpe. O segundo quase ninguém percebe.”</dd></div>
+          <div><dt>Formato</dt><dd>Especialista em cena (mecânico, vistoriador, creator de segurança) com checklist na tela. Test drive guiado.</dd></div>
+          <div><dt>Ponte</dt><dd>App e recursos de segurança da plataforma <span class="flag">verificar</span>. Reduz o atrito que trava a 3ª marcha.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Comprador</span><span class="t">Anunciante PF</span><span class="t m">2ª marcha</span></div>
+      </article>
+
+      <article class="ed" data-track="ANPF">
+        <div class="top"><span class="ecode">VEN</span><span class="idx">08</span></div>
+        <h4>Venda sem dor de cabeça</h4>
+        <p class="q">“Como vender rápido e pelo preço certo?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Mesmo carro, duas fotos diferentes. Em qual anúncio você clicaria?”</dd></div>
+          <div><dt>Formato</dt><dd>Antes/depois de fotos e descrição; tutorial em screen recording do cadastro; checklist de valorização.</dd></div>
+          <div><dt>Ponte</dt><dd>Avaliação do usado → cadastro de anúncio.</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Anunciante PF</span><span class="t m">2ª · 3ª marcha</span></div>
+      </article>
+
+      <article class="ed" data-track="LOJA">
+        <div class="top"><span class="ecode">LOJ</span><span class="idx">09</span></div>
+        <h4>Loja que vende</h4>
+        <p class="q">“Como vender mais carro pelo digital?”</p>
+        <dl>
+          <div><dt>Hook</dt><dd class="hook">“Tenho uma loja em [cidade] e esse ajuste no anúncio mudou meu mês.”</dd></div>
+          <div><dt>Formato</dt><dd>Lojista real ou creator do segmento, bastidor da loja, gestão de estoque digital. Spark a partir do perfil do lojista.</dd></div>
+          <div><dt>Ponte</dt><dd>Formulário / página de planos (web, UTM da Seção 06).</dd></div>
+        </dl>
+        <div class="foot2"><span class="t">Lojista</span><span class="t m">2ª · 4ª marcha</span><span class="t warn">só case real aprovado</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="e4">
+    <div class="head"><span class="num e">E4</span><h2>Matriz editoria × conversão</h2></div>
+    <div class="prose"><p>Visão consolidada para planejamento de pauta e de mídia. A coluna “Em Ads” diz como a editoria entra na conta paga.</p></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Editoria</th><th>Marcha</th><th>Track</th><th>Conversão principal</th><th>Em Ads</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">CUS · Quanto custa</td><td>2ª–3ª</td><td>COMP</td><td>Simulação de financiamento</td><td>Spark do vencedor + In-Feed dedicado, conversão web</td></tr>
+          <tr><td class="rowkey">BOL · Cabe no bolso</td><td>2ª–4ª</td><td>COMP</td><td>App install → busca</td><td>In-Feed de app promotion com deep link por faixa</td></tr>
+          <tr><td class="rowkey">TRC · Hora de trocar</td><td>2ª–3ª</td><td>COMP · ANPF</td><td>Avaliação + simulação (troca)</td><td>Prioridade máxima de Spark, conversão web</td></tr>
+          <tr><td class="rowkey">DUE · Esse ou esse?</td><td>1ª–2ª</td><td>COMP</td><td>Busca no app · audiência</td><td>Spark para alcance; engajados viram público de retargeting</td></tr>
+          <tr><td class="rowkey">RAD · Radar</td><td>1ª</td><td>COMP · LOJA</td><td>Autoridade · seguidores</td><td>Pontual, em picos de notícia</td></tr>
+          <tr><td class="rowkey">ACH · Achados</td><td>1ª</td><td>COMP</td><td>Alcance · share</td><td>Raramente; orgânico puro</td></tr>
+          <tr><td class="rowkey">BLI · Compra blindada</td><td>2ª</td><td>COMP · ANPF</td><td>Confiança · salvamentos</td><td>Spark de apoio em retargeting</td></tr>
+          <tr><td class="rowkey">VEN · Venda fácil</td><td>2ª–3ª</td><td>ANPF</td><td>Anúncio cadastrado</td><td>In-Feed + Spark, conversão web/app</td></tr>
+          <tr><td class="rowkey">LOJ · Loja que vende</td><td>2ª–4ª</td><td>LOJA</td><td>Lead de plano</td><td>Spark via perfil do lojista (Track 01)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Roteiro-modelo — Editoria TRC (Hora de trocar)</h3>
+    <div class="prose"><p style="font-size:14.5px;color:var(--ink-2)">Estrutura de referência que a agência replica para qualquer editoria: objetivo, hook, roteiro em tabela, CTA, legenda e estratégia de comentários.</p></div>
+    <div class="rot-head">
+      <div><b>Objetivo de negócio</b><span>Simulação de troca (avaliação + financiamento)</span></div>
+      <div><b>Duração / formato</b><span>~30s · talking head + screen recording</span></div>
+      <div><b>Marcha / track</b><span>3ª · Comprador</span></div>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Tempo</th><th>Cena / texto na tela</th><th>Fala</th></tr></thead>
+        <tbody>
+          <tr><td class="tc">0–3s</td><td>Close no rosto, carro atual ao fundo, celular na mão.<br><span class="ost">Vai trocar de carro? Faz isso antes da loja.</span></td><td>“Vai trocar de carro este ano? Faz isso antes de pisar na loja.”</td></tr>
+          <tr><td class="tc">3–9s</td><td>Screen recording: avaliação do usado na Webmotors, preenchendo modelo e ano.</td><td>“Descobre quanto o seu vale de verdade. Aqui leva uns dois minutos.”</td></tr>
+          <tr><td class="tc">9–15s</td><td>Resultado da avaliação na tela (valor ilustrativo).<br><span class="ost">Esse é o seu poder de negociação</span></td><td>“Com esse número você chega sabendo quanto tem de entrada. Ninguém te subavalia.”</td></tr>
+          <tr><td class="tc">15–24s</td><td>Simulação de financiamento usando o valor como entrada.<br><span class="ost">Entrada + parcela = seu próximo carro</span></td><td>“Aí joga como entrada na simulação e vê qual carro cabe na parcela.”</td></tr>
+          <tr><td class="tc">24–30s</td><td>Busca no app com filtro de preço, dois takes de carros reais.<br><span class="ost">Avalie o seu na Webmotors</span></td><td>“Você chega na negociação com a conta feita. Busca Webmotors.”</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="clean mini">
+      <li><strong>CTA:</strong> no orgânico, comentário fixado com o caminho da ferramenta + link do perfil; em Ads, Spark com botão “Saiba mais” → página de avaliação/simulação com UTM (Seção 06).</li>
+      <li><strong>Legenda:</strong> “Vai trocar de carro? Faz a conta antes da loja.” + 3–4 hashtags de busca: <code class="inline">#trocadecarro</code> <code class="inline">#carrousado</code> <code class="inline">#financiamento</code> <code class="inline">#webmotors</code>.</li>
+      <li><strong>Som:</strong> voz original + trilha instrumental baixa. Conta business usa apenas faixas da Commercial Music Library <span class="flag">verificar</span>.</li>
+      <li><strong>Comentários:</strong> fixar “Qual carro você quer trocar? Respondo com vídeo quanto ele vale 👇” e transformar as melhores perguntas em video replies (alimentam TRC e RAD).</li>
+    </ul>
+  </section>
+
+  <section id="e5">
+    <div class="head"><span class="num e">E5</span><h2>Pontes de conversão</h2></div>
+    <div class="prose"><p>É aqui que a máxima do canal vira operação: como um vídeo que performou no orgânico chega até uma simulação concluída ou um app instalado — e como quem não converteu volta.</p></div>
+    <div class="flow">
+      <div class="fstep"><b>Post orgânico</b><span>Publicado dentro de uma editoria e marcha.</span></div>
+      <div class="fstep"><b>Sinal</b><span>Retenção, share e comentários com intenção de compra.</span></div>
+      <div class="fstep"><b>Spark Ad</b><span>O vencedor é impulsionado com objetivo de conversão.</span></div>
+      <div class="fstep"><b>Destino</b><span>Web: simulador/avaliação com UTM. App: deep link para a busca.</span></div>
+      <div class="fstep"><b>Evento</b><span>Simulação concluída, install, busca, anúncio, lead.</span></div>
+      <div class="fstep"><b>Audiência</b><span>Engajados e quem não concluiu viram público.</span></div>
+    </div>
+    <div class="loop"><i>↺</i><span>A audiência do passo 6 volta como retargeting com criativos de 3ª e 4ª marcha — é o que fecha o ciclo e barateia a conversão.</span></div>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Ponte</th><th>Como funciona</th><th>Mensuração</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">Orgânico</td><td>CTA falado + texto na tela (“busca [termo] na Webmotors”), comentário fixado, link no perfil <span class="flag">verificar</span> elegibilidade, video reply.</td><td>Busca de marca, acessos ao perfil, cliques no link</td></tr>
+          <tr><td class="rowkey">Spark · web</td><td>Objetivo de conversões web, otimizando para simulação concluída. Destino = página da ferramenta com UTM.</td><td>Pixel + Events API · UTM (Seção 06)</td></tr>
+          <tr><td class="rowkey">In-Feed · app</td><td>Objetivo de app promotion, otimizando para install ou evento no app. Deep link para a busca da editoria (faixa de preço, modelo).</td><td>SDK / MMP (Seção 01)</td></tr>
+          <tr><td class="rowkey">Retargeting</td><td>Públicos de engajamento de vídeo (visualização 6s/15s, interação) e visitantes do simulador que não concluíram.</td><td>Custo por conversão vs. prospecção</td></tr>
+          <tr><td class="rowkey">TikTok Search</td><td>Palavra-chave nos primeiros 5 segundos (falada e na tela) e na legenda. Avaliar anúncios em resultados de busca <span class="flag">verificar</span>.</td><td>Impressões de busca, CTR</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <p class="tab">Pré-requisito técnico</p>
+      <p>A ponte só funciona se os eventos de <strong>simulação iniciada/concluída</strong> e <strong>avaliação concluída</strong> estiverem disparando no Pixel/Events API e mapeados para eventos de otimização do TikTok, e se o app tiver deep links por busca. Validar com tracking e produto antes da primeira rodada de Spark.</p>
+    </div>
+  </section>
+
+  <section id="e6">
+    <div class="head"><span class="num e">E6</span><h2>Cadência e calendário</h2></div>
+    <div class="prose"><p>Sugestão de semana-tipo, pela ótica de performance, para alinhar com o calendário que o time de Social Media &amp; Conteúdo já opera. Não é uma grade paralela: a ideia é garantir que as editorias com maior potencial de conversão tenham presença constante no perfil e, portanto, material para Spark.</p></div>
+    <div class="week">
+      <div class="day"><p class="d">Seg</p><span class="c">RAD</span><p>Radar da semana: abre a pauta.</p></div>
+      <div class="day"><p class="d">Ter</p><span class="c">CUS</span><span class="c">BOL</span><p>Alternando semana a semana.</p></div>
+      <div class="day"><p class="d">Qua</p><span class="c">DUE</span><p>Duelo com voto; comentários do meio da semana.</p></div>
+      <div class="day"><p class="d">Qui</p><span class="c">TRC</span><span class="c">VEN</span><p>Dia de conversão: troca ou venda.</p></div>
+      <div class="day"><p class="d">Sex</p><span class="c">ACH</span><p>Achado para o fim de semana.</p></div>
+      <div class="day"><p class="d">Sáb</p><span class="c">BLI</span><p>Segurança: quem vai ver carro no sábado.</p></div>
+      <div class="day alt"><p class="d">Dom</p><span class="c">REPLY</span><p>Video replies das perguntas da semana.</p></div>
+    </div>
+    <p class="secondary"><strong>LOJ</strong> roda quinzenal, preferencialmente via perfil de lojistas parceiros + Spark (Track 01), para não diluir o perfil B2C.</p>
+
+    <div class="mix">
+      <div class="mixcard">
+        <p class="tab">Mix do orgânico por marcha</p>
+        <div class="mrow"><span>1ª Atração</span><div class="tr"><i style="width:40%"></i></div><b>40%</b></div>
+        <div class="mrow"><span>2ª Consideração</span><div class="tr"><i style="width:35%"></i></div><b>35%</b></div>
+        <div class="mrow"><span>3ª Simulação</span><div class="tr"><i style="width:25%"></i></div><b>25%</b></div>
+      </div>
+      <div class="mixcard">
+        <p class="tab">Mix de verba em Ads por marcha</p>
+        <div class="mrow"><span>1ª–2ª (Spark)</span><div class="tr"><i style="width:20%"></i></div><b>20%</b></div>
+        <div class="mrow"><span>3ª Simulação</span><div class="tr"><i style="width:45%"></i></div><b>45%</b></div>
+        <div class="mrow"><span>4ª Ativação</span><div class="tr"><i style="width:35%"></i></div><b>35%</b></div>
+      </div>
+    </div>
+
+    <h3>Janelas sazonais do setor</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Janela</th><th>Contexto</th><th>Editorias em foco</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">Jan–Fev</td><td>IPVA, licenciamento, planejamento do ano</td><td>CUS · TRC · RAD</td></tr>
+          <tr><td class="rowkey">Mar–Mai</td><td>Volta à rotina, restituição do IR</td><td>BOL · DUE · VEN</td></tr>
+          <tr><td class="rowkey">Jun–Jul</td><td>Férias e viagens de carro</td><td>DUE (espaço, porta-malas) · BLI</td></tr>
+          <tr><td class="rowkey">Ago–Out</td><td>Lançamentos e segundo semestre</td><td>RAD · ACH · TRC</td></tr>
+          <tr><td class="rowkey">Nov–Dez</td><td>13º salário, Black Friday, viagens de fim de ano</td><td>BOL · CUS · TRC — pico de 3ª/4ª marcha</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="secondary">Cruzar essas janelas com a sazonalidade real do histórico de mídia da conta antes de fechar o plano anual.</p>
+
+    <h3>Creators por editoria</h3>
+    <ul class="clean mini">
+      <li><strong>Finanças pessoais</strong> (CUS, TRC): credibilidade para falar de parcela e custo sem cara de propaganda.</li>
+      <li><strong>Mecânicos e vistoriadores</strong> (BLI, VEN): autoridade técnica, alto índice de salvamento.</li>
+      <li><strong>Car photography e lifestyle urbano</strong> (ACH, DUE): estética e alcance.</li>
+      <li><strong>Lojistas reais</strong> (LOJ): prova social para o Track 01.</li>
+      <li>Faixa de 10k a 500k seguidores, 2–4 creators/mês na fase 1. Conteúdo com direito de uso para Spark cedido em contrato.</li>
+    </ul>
+  </section>
+
+  <section id="e7">
+    <div class="head"><span class="num e">E7</span><h2>Tom, métricas e rito de leitura</h2></div>
+    <div class="prose"><p>A Webmotors no TikTok é a amiga que entende de carro e de dinheiro: inteligente, direta, com leveza quando cabe. Nunca a marca tentando parecer mais jovem do que é.</p></div>
+    <div class="dodont">
+      <div class="dd yes"><p class="tab"><i>✓</i>Faz</p>
+        <ul><li>Linguagem clara, de gente falando com gente</li><li>Carro real, bem filmado, com detalhe</li><li>Resposta útil nos primeiros segundos</li><li>Responde comentário como pessoa, com vídeo quando vale</li><li>Leveza e auto-ironia pontual, dentro do tom sóbrio da marca</li></ul>
+      </div>
+      <div class="dd no"><p class="tab"><i>✕</i>Não faz</p>
+        <ul><li>Repostar Reels ou comercial de TV com barra preta</li><li>Gíria forçada, meme defasado, humor apelativo</li><li>Vender financiamento sem entregar valor antes</li><li>Prometer aprovação de crédito ou “juro zero” sem base</li><li>Ignorar comentários ou responder como robô</li></ul>
+      </div>
+    </div>
+
+    <h3>Métricas por marcha</h3>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Marcha</th><th>Métrica principal</th><th>Referência inicial</th></tr></thead>
+        <tbody>
+          <tr><td class="rowkey">1ª Atração</td><td>Visualização completa · taxa de compartilhamento</td><td>&gt;50% em vídeos curtos · &gt;1% das views</td></tr>
+          <tr><td class="rowkey">2ª Consideração</td><td>Salvamentos · comentários com pergunta de compra</td><td>Crescimento semana a semana</td></tr>
+          <tr><td class="rowkey">3ª Simulação</td><td>Custo por simulação concluída · taxa de conclusão</td><td>Calibrar com histórico de mídia</td></tr>
+          <tr><td class="rowkey">4ª Ativação</td><td>CPI · custo por evento no app · custo por lead</td><td>Calibrar com histórico de mídia</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="secondary">As referências de 1ª marcha são metas de partida; as de 3ª e 4ª devem nascer do histórico da conta após 4–6 semanas.</p>
+
+    <h3>Rito semanal (orgânico ↔ performance)</h3>
+    <ol class="rite">
+      <li><b>Ranquear</b> os posts da semana por retenção, compartilhamento e comentários com intenção.</li>
+      <li><b>Promover</b> o top 10–20% a Spark Ad, na marcha certa, com o objetivo de conversão correspondente — com autorização de Spark alinhada com Social Media.</li>
+      <li><b>Cortar ou reformatar</b> editoria que fique 3 semanas seguidas abaixo da mediana do perfil.</li>
+      <li><b>Devolver</b> para Social Media os aprendizados de performance (editorias, hooks e perguntas que convertem) como insumo de pauta.</li>
+    </ol>
+  </section>
+
+  <div class="part">
+    <div class="strip" aria-hidden="true"></div>
+    <span class="letter">B</span>
+    <div class="ptxt"><b>Produção de Ads</b><span>Specs, matriz, rastreamento, nomenclatura e handover para a agência</span></div>
+  </div>
 
   <section>
     <div class="head"><span class="num">01</span><h2>Aplicação por audiência</h2></div>
@@ -444,6 +994,8 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
       <li><span class="box"></span> Track e conceito corretos no nome do arquivo</li>
       <li><span class="box"></span> Compliance automotivo/financeiro conferido</li>
       <li><span class="box"></span> Specs conferidas contra a spec sheet viva do TikTok</li>
+      <li><span class="box"></span> Editoria (E3) e marcha (E2) definidas no manifesto</li>
+      <li><span class="box"></span> Ponte de conversão explícita: CTA + destino (E5)</li>
     </ul>
     <div class="slab">
       <div class="strip" aria-hidden="true"></div>
@@ -452,6 +1004,7 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
       <p><strong>Financiamento:</strong> taxa, parcela e CET seguem regras do Bacen e do parceiro financeiro (Santander Financiamentos). Não prometer aprovação; exibir condições quando exigido. Nada de “juro zero” sem base.</p>
       <p><strong>Garantia de seminovos:</strong> afirmar apenas o que o programa cobre.</p>
       <p>Não usar placa, dados de veículo ou dados pessoais reais sem consentimento; direitos de imagem em UGC devidamente cedidos.</p>
+      <p><strong>Vale para o orgânico também:</strong> qualquer parcela ou valor em vídeo do perfil é ilustrativo e segue as mesmas regras. Dados do Radar só publicados após validação interna.</p>
     </div>
   </section>
 
@@ -481,7 +1034,7 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
     </div>
     <div class="mani-wrap">
       <table class="mani">
-        <thead><tr><th>Arquivo</th><th>Track</th><th>Conceito</th><th>Caption</th><th>CTA</th><th aria-label="remover"></th></tr></thead>
+        <thead><tr><th>Arquivo</th><th>Track</th><th>Editoria</th><th>Conceito</th><th>Caption</th><th>CTA</th><th aria-label="remover"></th></tr></thead>
         <tbody id="mBody"></tbody>
       </table>
     </div>
@@ -497,7 +1050,7 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
 <footer class="foot">
   <div class="wrap">
     <p class="wm">webmotors</p>
-    <p><b>Briefing de Produção — TikTok Ads.</b> Documento interno de performance, v1. Itens marcados <span style="color:var(--red);font-weight:600">verificar</span> devem ser validados na spec sheet viva do TikTok na data da produção.</p>
+    <p><b>Briefing TikTok — Estratégia &amp; Produção.</b> Plano de mídia de performance, v2 (Parte A: camada estratégica de performance · Parte B: produção de Ads). Complementa, e não substitui, o plano de conteúdo orgânico de Social Media &amp; Conteúdo Criativo. Itens marcados <span style="color:var(--red);font-weight:600">verificar</span> devem ser validados na spec sheet viva do TikTok na data da produção.</p>
     <p class="santander">Uma empresa Santander</p>
   </div>
 </footer>
@@ -508,12 +1061,13 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
   var cols=[
     {k:'arquivo',ph:'WEBMOTORS_COMP_INFEED_financiamento_hookA_15s_9x16_v01.mp4'},
     {k:'track',ph:'COMP'},
+    {k:'editoria',ph:'TRC'},
     {k:'conceito',ph:'financiamento'},
     {k:'caption',ph:'Caption do anúncio…',cap:true},
     {k:'cta',ph:'Baixar'}
   ];
   var body=document.getElementById('mBody');
-  function blank(){return {arquivo:'',track:'',conceito:'',caption:'',cta:''};}
+  function blank(){return {arquivo:'',track:'',editoria:'',conceito:'',caption:'',cta:''};}
   function load(){try{var r=JSON.parse(localStorage.getItem(KEY));return Array.isArray(r)?r:[];}catch(e){return [];}}
   function save(){try{localStorage.setItem(KEY,JSON.stringify(rows));}catch(e){}}
   var rows=load(); if(!rows.length) rows=[blank()];
@@ -522,7 +1076,7 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
 
   function render(){
     body.innerHTML='';
-    if(!rows.length){var e=document.createElement('tr');e.innerHTML='<td colspan="6" class="mani-empty">Nenhum criativo ainda. Clique em “Adicionar linha”.</td>';body.appendChild(e);return;}
+    if(!rows.length){var e=document.createElement('tr');e.innerHTML='<td colspan="7" class="mani-empty">Nenhum criativo ainda. Clique em “Adicionar linha”.</td>';body.appendChild(e);return;}
     rows.forEach(function(row,i){
       var tr=document.createElement('tr');
       cols.forEach(function(c){
@@ -546,11 +1100,11 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
   document.getElementById('mAdd').addEventListener('click',function(){rows.push(blank()); save(); render();});
   document.getElementById('mClear').addEventListener('click',function(){if(confirm('Limpar todo o manifesto?')){rows=[blank()]; save(); render();}});
   document.getElementById('mCopy').addEventListener('click',function(){
-    var head=['Arquivo','Track','Conceito','Caption','CTA'];
+    var head=['Arquivo','Track','Editoria','Conceito','Caption','CTA'];
     var lines=[head.join('\t')];
     rows.forEach(function(r){
-      if(r.arquivo||r.caption||r.conceito||r.track||r.cta){
-        lines.push([r.arquivo,r.track,r.conceito,r.caption,r.cta].map(function(x){return (x||'').replace(/[\t\n]/g,' ');}).join('\t'));
+      if(r.arquivo||r.caption||r.conceito||r.track||r.cta||r.editoria){
+        lines.push([r.arquivo,r.track,r.editoria,r.conceito,r.caption,r.cta].map(function(x){return (x||'').replace(/[\t\n]/g,' ');}).join('\t'));
       }
     });
     var tsv=lines.join('\n'), btn=this, orig=btn.textContent;
@@ -564,5 +1118,15 @@ WEBMOTORS_ANPF_INFEED_anuncierapido_hookA_15s_9x16_v01.mp4</pre></div>
 })();
 </script>
 
+<script>
+(function(){
+  var chips=document.querySelectorAll('.chip'), cards=document.querySelectorAll('#eds .ed');
+  chips.forEach(function(c){c.addEventListener('click',function(){
+    var f=c.getAttribute('data-f');
+    chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false');});
+    cards.forEach(function(card){var t=card.getAttribute('data-track').split(' '); card.hidden=!(f==='all'||t.indexOf(f)>-1);});
+  });});
+})();
+</script>
 </body>
 </html>
